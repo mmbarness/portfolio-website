@@ -3,7 +3,7 @@ const webpack = require('webpack'); //to access built-in plugins
 const HtmlWebpackPlugin = require("html-webpack-plugin");
  
 module.exports = {
-    entry: './frontend/portfolio-entry.js',
+    entry: './frontend/entry.js',
     output: {
         // path: path.resolve(__dirname, 'frontend', 'bundle'),
         filename: 'frontend/bundle.js'
@@ -28,7 +28,14 @@ module.exports = {
             presets: ["@babel/preset-env", "@babel/preset-react"]
             }
         },
-        {test: /\.(css|scss})$/, loader: 'css-loader'},
+        {test: /\.scss$/,
+          use: [{
+            loader: "style-loader"
+          }, {
+            loader: "css-loader" 
+          }, {
+            loader: "sass-loader"
+          }]},
         {
             test: /\.svg/,
             use: {

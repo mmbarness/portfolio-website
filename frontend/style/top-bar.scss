@@ -1,0 +1,19 @@
+.top-bar-container {
+    position: fixed;
+    background-color: #ffe9c9;
+    font-family: 'Roboto Slab';
+    font-size: 2em;
+    top: 0;
+    display: flex; 
+    flex-flow: wrap;
+    justify-content: center; 
+    height: auto;
+    width: 100%;
+    z-index: 2;
+    opacity: .975;
+    padding-bottom: .5em;
+}
+
+.top-bar-container > p{
+    padding-top: .5em;
+}
