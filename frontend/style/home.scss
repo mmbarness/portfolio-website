@@ -1,0 +1,37 @@
+#home-container{
+    margin: auto;
+    margin-top: 7em;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    width: 85%;
+}
+
+#headshot{
+    width: 40%;
+    margin: 2em;
+    border-radius: .5em;
+}
+
+#bio-block{
+    padding: 2em;
+    display: flex;
+    flex-flow: column;
+    font-family: 'Inter'
+}
+
+#bio-block-header{
+    font-size: 2em;
+    padding-bottom: .5em;
+    align-self: center;
+}
+
+#bio-block-body-1{
+    font-size: 1.5em;
+    text-indent: 1em;
+}
+
+#bio-block-body-2{
+    font-size: 1.5em;
+    text-indent: 1em;
+}
