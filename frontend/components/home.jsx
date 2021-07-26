@@ -4,8 +4,6 @@ import {Link} from 'react-router-dom'
 
 const Home = (props) => {
 
-    console.log('hi')
-
     return (
         <div>
             this is home
