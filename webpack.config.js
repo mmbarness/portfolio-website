@@ -13,6 +13,9 @@ module.exports = {
             title: 'Portfolio Template',
             templateContent: 
 `<html>
+    <head>
+        <title>matthew barnes</title>
+    </head>
     <div id = "root"></div>
 </html>`
             })
