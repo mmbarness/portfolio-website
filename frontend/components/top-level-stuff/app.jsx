@@ -12,6 +12,7 @@ import { Home } from '../home';
 import { NotFoundPage } from '../NotFoundPage'
 import '../../style/reset.scss'
 import '../../style/application.scss'
+import { Footer } from '../footer';
 
 const App = () => {
 
@@ -20,6 +21,7 @@ const App = () => {
   return(
     <div id="umbrella-div">
       <Route path = "/" component={TopBar} location ={location}/>
+      <Route path = "/" component={Footer} location ={location}/>
       <Switch>
         <Route exact path = "/" component ={Home}/>
         <Route path="/404" component={NotFoundPage} />

@@ -1,0 +1,23 @@
+.footer-container {
+    position: fixed;
+    font-family: "Roboto Slab";
+    font-size: 1.5em;
+    bottom: 0;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    z-index: 2;
+    opacity: 0.975;
+    padding-bottom: 0.5em;
+}
+
+.footer-container > a{
+    padding: 0em .5em 0em .5em;
+}
+
+a{
+    text-decoration-line: none;
+}
