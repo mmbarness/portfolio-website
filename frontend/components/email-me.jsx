@@ -19,13 +19,13 @@ export const EmailMe = () => {
         <form id="contact-form" onSubmit={sendEmail}>
             <h3 id="contact-header">email me!</h3>
             <input type="hidden" name="contact_number" />
-            <label className="contact-form-label">Name:
+            <label className="contact-form-label"><span>Name:</span>
                 <input type="text" name="user_name" />
             </label>
-            <label className="contact-form-label">(Your) Email:
+            <label className="contact-form-label"><span>(Your) Email:</span>
                 <input type="email" name="user_email" />
             </label>
-            <label className="contact-form-label">Message:
+            <label className="contact-form-label"><span>Message:</span>
                 <textarea id="contact-form-textarea" name="message" />
             </label>
             <input type="submit" value="Send" id="send-email-btn"/>

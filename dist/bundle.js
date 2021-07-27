@@ -121,17 +121,17 @@ var EmailMe = function EmailMe() {
     name: "contact_number"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
     className: "contact-form-label"
-  }, "Name:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, "Name:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
     type: "text",
     name: "user_name"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
     className: "contact-form-label"
-  }, "(Your) Email:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, "(Your) Email:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
     type: "email",
     name: "user_email"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
     className: "contact-form-label"
-  }, "Message:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("textarea", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, "Message:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("textarea", {
     id: "contact-form-textarea",
     name: "message"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
@@ -239,7 +239,7 @@ var Home = function Home(props) {
   }, "grid"), ", and ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
     href: "https://github.com/mmbarness/call-sheet/blob/e433233e7c767e3ad40606197896ddcbc240c054/src/styles/topBar/search.scss#L37",
     target: "_blank"
-  }, "animations"), ".")), (0,_email_me__WEBPACK_IMPORTED_MODULE_3__.EmailMe)());
+  }, "animations"), "."), (0,_email_me__WEBPACK_IMPORTED_MODULE_3__.EmailMe)()));
 };
 
 /***/ }),
@@ -16821,7 +16821,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#contact-form {\n  grid-column: 2;\n  grid-row: 2;\n  display: flex;\n  flex-flow: column;\n  font-size: 1.25em;\n  font-family: \"Inter\";\n  width: 70%;\n  margin: auto;\n}\n\n#contact-header {\n  align-self: center;\n  padding-bottom: 0.25em;\n}\n\n.contact-form-label {\n  display: flex;\n  flex-flow: row;\n  justify-content: space-between;\n  padding: 0.5em 0em 0.5em 0em;\n}\n\n.contact-form-label > input {\n  width: 60%;\n}\n\n#send-email-btn:hover {\n  cursor: pointer;\n  background-color: #bad1db;\n}\n\n#send-email-btn {\n  align-self: center;\n  padding: 0.5em;\n  margin-top: 0.5em;\n  font-family: \"Roboto Slab\";\n  background-color: #738F9B;\n  color: white;\n  font-weight: 400;\n  border-radius: 0.5em;\n  border: none;\n  width: 40%;\n}", "",{"version":3,"sources":["webpack://./frontend/style/email.scss"],"names":[],"mappings":"AAAA;EACI,cAAA;EACA,WAAA;EACA,aAAA;EACA,iBAAA;EACA,iBAAA;EACA,oBAAA;EACA,UAAA;EACA,YAAA;AACJ;;AAEA;EACI,kBAAA;EACA,sBAAA;AACJ;;AAEA;EACI,aAAA;EACA,cAAA;EACA,8BAAA;EACA,4BAAA;AACJ;;AAEA;EACI,UAAA;AACJ;;AAEA;EACE,eAAA;EACA,yBAAA;AACF;;AAEA;EACI,kBAAA;EACA,cAAA;EACA,iBAAA;EACA,0BAAA;EACA,yBAAA;EACA,YAAA;EACA,gBAAA;EACA,oBAAA;EACA,YAAA;EACA,UAAA;AACJ","sourcesContent":["#contact-form {\n    grid-column: 2;\n    grid-row: 2;\n    display: flex;\n    flex-flow: column;\n    font-size: 1.25em;\n    font-family: \"Inter\";\n    width: 70%;\n    margin: auto;\n}\n\n#contact-header{\n    align-self: center;\n    padding-bottom: .25em;\n}\n\n.contact-form-label{\n    display: flex;\n    flex-flow: row;\n    justify-content: space-between;\n    padding: .5em 0em 0.5em 0em;\n}\n\n.contact-form-label > input{\n    width: 60%\n}\n\n#send-email-btn:hover{\n  cursor:pointer;\n  background-color: #bad1db;\n}\n\n#send-email-btn {\n    align-self: center;\n    padding: .5em;\n    margin-top: .5em;\n    font-family: 'Roboto Slab';\n    background-color: #738F9B;\n    color: white;\n    font-weight: 400;\n    border-radius: .5em;\n    border: none;\n    width: 40%\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "#contact-form {\n  grid-column: 2;\n  grid-row: 2;\n  display: flex;\n  flex-flow: column;\n  font-size: 1.25em;\n  font-family: \"Inter\";\n  padding-top: 0.5em;\n  margin: auto;\n}\n\n#contact-header {\n  align-self: center;\n  padding-bottom: 0.25em;\n}\n\n.contact-form-label {\n  display: flex;\n  flex-flow: row;\n  justify-content: space-between;\n  padding: 0.5em 0em 0.5em 0em;\n  font-size: 0.75em;\n}\n\n.contact-form-label > span {\n  padding-right: 0.25em;\n}\n\n.contact-form-label > input {\n  width: 60%;\n}\n\n#contact-form-textarea {\n  min-width: 15em;\n  min-height: 4em;\n}\n\n#send-email-btn:hover {\n  cursor: pointer;\n  background-color: #bad1db;\n}\n\n#send-email-btn {\n  align-self: center;\n  padding: 0.5em;\n  margin-top: 0.5em;\n  font-family: \"Roboto Slab\";\n  background-color: #738F9B;\n  color: white;\n  font-weight: 400;\n  border-radius: 0.5em;\n  border: none;\n  width: 40%;\n}", "",{"version":3,"sources":["webpack://./frontend/style/email.scss"],"names":[],"mappings":"AAAA;EACI,cAAA;EACA,WAAA;EACA,aAAA;EACA,iBAAA;EACA,iBAAA;EACA,oBAAA;EACA,kBAAA;EACA,YAAA;AACJ;;AAEA;EACI,kBAAA;EACA,sBAAA;AACJ;;AAEA;EACI,aAAA;EACA,cAAA;EACA,8BAAA;EACA,4BAAA;EACA,iBAAA;AACJ;;AACA;EACI,qBAAA;AAEJ;;AACA;EACI,UAAA;AAEJ;;AACA;EACI,eAAA;EACA,eAAA;AAEJ;;AACA;EACE,eAAA;EACA,yBAAA;AAEF;;AACA;EACI,kBAAA;EACA,cAAA;EACA,iBAAA;EACA,0BAAA;EACA,yBAAA;EACA,YAAA;EACA,gBAAA;EACA,oBAAA;EACA,YAAA;EACA,UAAA;AAEJ","sourcesContent":["#contact-form {\n    grid-column: 2;\n    grid-row: 2;\n    display: flex;\n    flex-flow: column;\n    font-size: 1.25em;\n    font-family: \"Inter\";\n    padding-top: .5em;\n    margin: auto;\n}\n\n#contact-header{\n    align-self: center;\n    padding-bottom: .25em;\n}\n\n.contact-form-label{\n    display: flex;\n    flex-flow: row;\n    justify-content: space-between;\n    padding: .5em 0em 0.5em 0em;\n    font-size: .75em;\n}\n.contact-form-label > span {\n    padding-right: .25em;\n}\n\n.contact-form-label > input{\n    width: 60%\n}\n\n#contact-form-textarea{\n    min-width: 15em;\n    min-height: 4em;\n}\n\n#send-email-btn:hover{\n  cursor:pointer;\n  background-color: #bad1db;\n}\n\n#send-email-btn {\n    align-self: center;\n    padding: .5em;\n    margin-top: .5em;\n    font-family: 'Roboto Slab';\n    background-color: #738F9B;\n    color: white;\n    font-weight: 400;\n    border-radius: .5em;\n    border: none;\n    width: 40%\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
