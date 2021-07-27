@@ -1,23 +1,26 @@
-#home-container{
+#home-container {
     margin: auto;
-    margin-top: 7em;
-    display: flex;
-    flex-flow: row;
-    justify-content: space-around;
-    width: 85%;
+    padding: 7em 10em 0em 10em;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
 }
 
-#headshot{
-    width: 40%;
+#headshot {
+    width: 70%;
     margin: 2em;
-    border-radius: .5em;
+    border-radius: 0.5em;
+    grid-column: 1;
+    grid-row: 1 / span 2;
 }
 
-#bio-block{
+
+#bio-block {
     padding: 2em;
     display: flex;
     flex-flow: column;
-    font-family: 'Inter'
+    font-family: "Inter";
+    grid-column: 2;
 }
 
 #bio-block-header{
@@ -35,3 +38,20 @@
     font-size: 1.5em;
     text-indent: 1em;
 }
+
+// .contact-form {
+//     grid-column: 2;
+//     grid-row: 2;
+//     display: flex;
+//     flex-flow: column;
+//     font-size: 1.5em;
+//     font-family: "Inter";
+//     width: 80%;
+//     margin: auto;
+// }
+
+// .contact-form-label{
+//     display: flex;
+//     flex-flow: row;
+//     justify-content: space-between;
+// }

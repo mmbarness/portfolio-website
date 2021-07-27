@@ -1,0 +1,44 @@
+#contact-form {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    flex-flow: column;
+    font-size: 1.5em;
+    font-family: "Inter";
+    width: 70%;
+    margin: auto;
+}
+
+#contact-header{
+    align-self: center;
+    padding-bottom: .25em;
+}
+
+.contact-form-label{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    padding: .5em 0em 0.5em 0em;
+}
+
+.contact-form-label > input{
+    width: 60%
+}
+
+#send-email-btn:hover{
+  cursor:pointer;
+  background-color: #bad1db;
+}
+
+#send-email-btn {
+    align-self: center;
+    padding: .5em;
+    margin-top: .5em;
+    font-family: 'Roboto Slab';
+    background-color: #738F9B;
+    color: white;
+    font-weight: 400;
+    border-radius: .5em;
+    border: none;
+    width: 40%
+}

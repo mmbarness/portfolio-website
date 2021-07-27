@@ -1,5 +1,6 @@
 import React from 'react';
 import emailjs from 'emailjs-com';
+import '../style/email.scss'
 
 export const EmailMe = () => {
 
@@ -15,15 +16,16 @@ export const EmailMe = () => {
     }
 
     return (
-        <form classname="contact-form" onSubmit={sendEmail}>
+        <form id="contact-form" onSubmit={sendEmail}>
+            <h3 id="contact-header">email me!</h3>
             <input type="hidden" name="contact_number" />
-            <label classname="contact-form-label">Name:
+            <label className="contact-form-label">Name:
                 <input type="text" name="user_name" />
             </label>
-            <label classname="contact-form-label">(Your) Email:
+            <label className="contact-form-label">(Your) Email:
                 <input type="email" name="user_email" />
             </label>
-            <label classname="contact-form-label">Message:
+            <label className="contact-form-label">Message:
                 <textarea id="contact-form-textarea" name="message" />
             </label>
             <input type="submit" value="Send" id="send-email-btn"/>
