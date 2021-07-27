@@ -7,21 +7,6 @@ module.exports = {
     output: {
         filename: 'bundle.js'
     },
-    plugins: [
-        new webpack.ProgressPlugin(),
-        new HtmlWebpackPlugin({
-            title: 'Portfolio Template',
-            templateContent: 
-`<html>
-    <head>
-        <link rel="shortcut icon" href="https://call-sheet.s3.amazonaws.com/Screen+Shot+2021-06-28+at+12.56.24.png">
-        <link ref="icon" type="image/png" href="https://call-sheet.s3.amazonaws.com/Screen+Shot+2021-06-28+at+12.56.24.png" sizes="560x562">
-        <title>matthew barnes</title>
-    </head>
-    <div id = "root"></div>
-</html>`
-            })
-    ],
     module: {
         rules: [
         {
