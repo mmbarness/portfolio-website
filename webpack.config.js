@@ -5,8 +5,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
     entry: './frontend/entry.js',
     output: {
-        // path: path.resolve(__dirname, 'frontend', 'bundle'),
-        filename: 'frontend/bundle.js'
+        filename: 'bundle.js'
     },
     plugins: [
         new webpack.ProgressPlugin(),

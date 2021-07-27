@@ -1,7 +1,7 @@
 import React from 'react';
 import emailjs from 'emailjs-com';
 
-export const EmailMe = ({toggleCheckoutModal}) => {
+export const EmailMe = () => {
 
     const sendEmail = async (e) => {
         e.preventDefault();
@@ -15,15 +15,15 @@ export const EmailMe = ({toggleCheckoutModal}) => {
     }
 
     return (
-        <form className="contact-form" onSubmit={sendEmail}>
+        <form classname="contact-form" onSubmit={sendEmail}>
             <input type="hidden" name="contact_number" />
-            <label className="contact-form-label">Name:
+            <label classname="contact-form-label">Name:
                 <input type="text" name="user_name" />
             </label>
-            <label className="contact-form-label">(Your) Email:
+            <label classname="contact-form-label">(Your) Email:
                 <input type="email" name="user_email" />
             </label>
-            <label className="contact-form-label">Message:
+            <label classname="contact-form-label">Message:
                 <textarea id="contact-form-textarea" name="message" />
             </label>
             <input type="submit" value="Send" id="send-email-btn"/>
