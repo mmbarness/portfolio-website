@@ -2,6 +2,7 @@ import React from 'react'
 import {logger} from 'redux-logger';
 import {Link} from 'react-router-dom'
 import '../style/home.scss'
+import { EmailMe } from './email-me';
 
 export const Home = (props) => {
 
