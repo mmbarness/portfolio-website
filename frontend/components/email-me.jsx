@@ -4,6 +4,11 @@ import '../style/email.scss'
 
 export const EmailMe = () => {
 
+    const toggleSendButtonText = () => {
+        let btn = document.getElementById('send-email-btn')
+        (btn.value === "Send") ? btn.value = 'Sent!' : bbtn.value = 'Sent'
+    }
+
     const sendEmail = async (e) => {
         e.preventDefault();
         emailjs.sendForm('service_sjnz7oq', 'template_6dj2gbm', e.target, 'user_qq0BsoTqEV0SBv3Iw0Lvk')
@@ -12,7 +17,14 @@ export const EmailMe = () => {
             }, (error) => {
                 console.log(error.text);
         });
-        await new Promise(r => setTimeout(r, 2000));
+        let btn = document.getElementById('send-email-btn')
+        btn.value = 'Sending'
+        await new Promise(r => setTimeout(r, 1000));
+        btn.value = 'Sent!'
+        btn.disabled = true
+        btn.style.backgroundColor = 'grey'
+        btn.style.pointerEvents = "none"
+        // await new Promise(r => setTimeout(r, 1000));
     }
 
     return (

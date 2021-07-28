@@ -81,8 +81,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 var EmailMe = function EmailMe() {
+  var toggleSendButtonText = function toggleSendButtonText() {
+    var btn = document.getElementById('send-email-btn')(btn.value === "Send") ? btn.value = 'Sent!' : bbtn.value = 'Sent';
+  };
+
   var sendEmail = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(e) {
+      var btn;
       return regeneratorRuntime.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -93,12 +98,20 @@ var EmailMe = function EmailMe() {
               }, function (error) {
                 console.log(error.text);
               });
-              _context.next = 4;
+              btn = document.getElementById('send-email-btn');
+              btn.value = 'Sending';
+              _context.next = 6;
               return new Promise(function (r) {
-                return setTimeout(r, 2000);
+                return setTimeout(r, 1000);
               });
 
-            case 4:
+            case 6:
+              btn.value = 'Sent!';
+              btn.disabled = true;
+              btn.style.backgroundColor = 'grey';
+              btn.style.pointerEvents = "none"; // await new Promise(r => setTimeout(r, 1000));
+
+            case 10:
             case "end":
               return _context.stop();
           }
