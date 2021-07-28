@@ -24,7 +24,6 @@ export const EmailMe = () => {
         btn.disabled = true
         btn.style.backgroundColor = 'grey'
         btn.style.pointerEvents = "none"
-        // await new Promise(r => setTimeout(r, 1000));
     }
 
     return (

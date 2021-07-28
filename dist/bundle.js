@@ -109,7 +109,7 @@ var EmailMe = function EmailMe() {
               btn.value = 'Sent!';
               btn.disabled = true;
               btn.style.backgroundColor = 'grey';
-              btn.style.pointerEvents = "none"; // await new Promise(r => setTimeout(r, 1000));
+              btn.style.pointerEvents = "none";
 
             case 10:
             case "end":
