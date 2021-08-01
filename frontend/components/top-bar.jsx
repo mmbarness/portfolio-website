@@ -17,7 +17,7 @@ export const TopBar = () => {
                     </a>
                 </li>
                 <li id="home-court-li">
-                    <a href="http://www.homecourt.club/#/" target="_blank">
+                    <a href="https://www.homecourt.club/#/" target="_blank">
                         Home Court
                     </a>
                 </li>                                
