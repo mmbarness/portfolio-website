@@ -7,7 +7,7 @@ export const TopBar = () => {
             <p id="my-name">Matthew Barnes</p>
             <ul id="project-link-list">
                 <li id="fullstack-li">
-                    <a href="http://record-collector.matthewbarnes.tech/#/" target="_blank">
+                    <a href="https://record-collector.matthewbarnes.tech/#/" target="_blank">
                         Record Collector
                     </a>
                 </li>
