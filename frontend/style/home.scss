@@ -15,27 +15,33 @@
     grid-row: 1 / span 2;
 }
 
-
 #bio-block {
     padding: 2em;
-    display: flex;
-    flex-flow: column;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 0.25fr 0.75fr 0.25fr 1fr;
     font-family: "Inter";
-    grid-column: 2;
+    grid-column-start: 2;
+    grid-row-start: 1;
 }
 
-#bio-block-header{
+
+#bio-block-header {
     font-weight: 400;
     font-size: 1.75em;
-    padding-bottom: .25em;
+    padding-bottom: 0.25em;
     align-self: center;
+    justify-self: center;
+    grid-column-start: 2;
+    grid-row-start: 1;
 }
 
-#bio-block-body-1{
+#bio-block-body-1 {
     font-size: 1.1em;
     text-indent: 1em;
+    grid-column-start: 2;
+    grid-row-start: 2;
 }
-
 .page-button:hover{
   cursor:pointer;
   background-color: #bad1db;
@@ -43,14 +49,17 @@
 
 .page-button {
     align-self: center;
-    padding: .5em;
-    margin-top: .5em;
-    font-family: 'Roboto Slab';
+    justify-self: center;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    font-family: "Roboto Slab";
     background-color: #738F9B;
     color: white;
     font-weight: 400;
-    border-radius: .5em;
+    border-radius: 0.5em;
     border: none;
-    width: 40%
+    width: 40%;
+    grid-column-start: 2;
+    grid-row-start: 3;
 }
 

@@ -5,7 +5,9 @@
     flex-flow: column;
     font-size: 1.25em;
     font-family: "Inter";
-    padding-top: .5em;
+    padding-top: 0.5em;
+    grid-column-start: 2;
+    grid-row-start: 4;
     margin: auto;
 }
 
