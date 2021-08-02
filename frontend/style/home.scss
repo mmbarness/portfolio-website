@@ -36,3 +36,21 @@
     text-indent: 1em;
 }
 
+.page-button:hover{
+  cursor:pointer;
+  background-color: #bad1db;
+}
+
+.page-button {
+    align-self: center;
+    padding: .5em;
+    margin-top: .5em;
+    font-family: 'Roboto Slab';
+    background-color: #738F9B;
+    color: white;
+    font-weight: 400;
+    border-radius: .5em;
+    border: none;
+    width: 40%
+}
+

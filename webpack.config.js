@@ -16,6 +16,14 @@ module.exports = {
             presets: ["@babel/preset-env", "@babel/preset-react"]
             }
         },
+        {test: /\.css$/,
+          use: [{
+            loader: "style-loader"
+          }, {
+            loader: "css-loader" 
+          }, {
+            loader: "sass-loader"
+          }]},
         {test: /\.scss$/,
           use: [{
             loader: "style-loader"
@@ -35,5 +43,16 @@ module.exports = {
     devtool: 'source-map',
     resolve: {
         extensions: ['.js', '.jsx', '*'],
-    }
+        alias: {
+            process: 'process/browser',
+            stream: "stream-browserify",
+            zlib: "browserify-zlib"
+        }
+    },
+    plugins: [
+        new webpack.ProvidePlugin({
+            process: 'process/browser',
+            Buffer: ['buffer', 'Buffer'],
+        }),
+    ]
 };

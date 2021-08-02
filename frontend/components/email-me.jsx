@@ -39,7 +39,7 @@ export const EmailMe = () => {
             <label className="contact-form-label"><span>Message:</span>
                 <textarea id="contact-form-textarea" name="message" />
             </label>
-            <input type="submit" value="Send" id="send-email-btn"/>
+            <input type="submit" value="Send" id="send-email-btn" className="page-button"/>
         </form>
   );
 }

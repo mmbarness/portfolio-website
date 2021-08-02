@@ -1,0 +1,15 @@
+.resume-modal-close{
+    display: none;
+}
+
+.resume-modal-is-open{
+    display: flex;
+    position: absolute;
+    top: 0em;
+    left: 30em;
+    z-index: 1000;
+}
+.react-pdf__Page__canvas{
+    width: 10em;
+    margin: 0 auto;
+}
