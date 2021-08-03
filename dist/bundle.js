@@ -430,7 +430,7 @@ var Resume = function Resume(props) {
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
     id: "resume-dl-link",
     href: pdfURL,
-    download: "Matthew Barnes-resume.pdf"
+    download: "Matthew Barnes-Resume.pdf"
   }, "download me"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
     id: "close-resume",
     onClick: function onClick() {

@@ -59,7 +59,7 @@ export const Resume = props => {
             <Document file="https://portfolio-yep.s3.amazonaws.com/matthew+barnes+-+resume.pdf" className="resume-pdf">
                 <Page pageNumber={1} height={windowDimensions.height - 75}/>
             </Document>
-            <a id="resume-dl-link" href={pdfURL} download="Matthew Barnes-resume.pdf">download me</a>
+            <a id="resume-dl-link" href={pdfURL} download="Matthew Barnes-Resume.pdf">download me</a>
             <span id="close-resume" onClick={() => props.setresumeModalVisible(!props.setresumeModalVisible)}>&times;</span>
         </div>   
     ) 
