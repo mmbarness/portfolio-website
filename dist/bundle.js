@@ -317,18 +317,11 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
- // import { Document, Page, } from 'react-pdf';
 
 
 
 var Resume = function Resume(props) {
   react_pdf_dist_esm_entry_webpack__WEBPACK_IMPORTED_MODULE_2__.pdfjs.GlobalWorkerOptions.workerSrc = "//cdnjs.cloudflare.com/ajax/libs/pdf.js/".concat(react_pdf_dist_esm_entry_webpack__WEBPACK_IMPORTED_MODULE_2__.pdfjs.version, "/pdf.worker.js");
-
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(window.innerHeight),
-      _useState2 = _slicedToArray(_useState, 2),
-      height = _useState2[0],
-      setheight = _useState2[1];
-
   document.addEventListener("click", function (e) {
     var resumeModal = document.getElementById("resume-modal");
 
@@ -342,20 +335,41 @@ var Resume = function Resume(props) {
     }
   });
 
-  var ResumePDF = function ResumePDF() {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_pdf_dist_esm_entry_webpack__WEBPACK_IMPORTED_MODULE_2__.Document, {
-      file: "https://portfolio-yep.s3.amazonaws.com/Matthew+Barnes-+Resume.pdf",
-      className: "resume-pdf"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_pdf_dist_esm_entry_webpack__WEBPACK_IMPORTED_MODULE_2__.Page, {
-      pageNumber: 1,
-      height: height - 75
-    }));
+  var getWindowDimensions = function getWindowDimensions() {
+    var _window = window,
+        width = _window.innerWidth,
+        height = _window.innerHeight;
+    return {
+      width: width,
+      height: height
+    };
   };
 
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(getWindowDimensions()),
+      _useState2 = _slicedToArray(_useState, 2),
+      windowDimensions = _useState2[0],
+      setWindowDimensions = _useState2[1];
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    var handleResize = function handleResize() {
+      return setWindowDimensions(getWindowDimensions());
+    };
+
+    window.addEventListener('resize', handleResize);
+    return function () {
+      return window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     id: "resume-modal",
     className: "resume-modal-".concat(props.resumeModalVisible ? "is-open" : "close")
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(ResumePDF, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_pdf_dist_esm_entry_webpack__WEBPACK_IMPORTED_MODULE_2__.Document, {
+    file: "https://portfolio-yep.s3.amazonaws.com/Matthew+Barnes-+Resume.pdf",
+    className: "resume-pdf"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_pdf_dist_esm_entry_webpack__WEBPACK_IMPORTED_MODULE_2__.Page, {
+    pageNumber: 1,
+    height: windowDimensions.height - 75
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
     id: "resume-dl-link",
     href: "https://portfolio-yep.s3.amazonaws.com/Matthew+Barnes-+Resume.pdf",
     download: "matthew-barnes.pdf",
