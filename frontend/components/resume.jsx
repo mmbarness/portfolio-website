@@ -19,6 +19,23 @@ export const Resume = props => {
         }
     })
 
+    const DownloadResource = async (url = "https://portfolio-yep.s3.amazonaws.com/matthew+barnes+-+resume.pdf", filename = "matthew-barnes-resume.pdf") => {
+        let linkElement = document.getElementById('resume-dl-link')
+        if (!filename) filename = url.split('\\').pop().split('/').pop();
+        let response = await fetch(url, {
+            headers: new Headers({
+                'Origin': location.origin,
+            }),
+            mode: 'cors'
+            }
+        ).then(resp => resp.blob())
+        let blobUrl = await window.URL.createObjectURL(response);
+        linkElement.href=blobUrl
+        return blobUrl
+    }
+
+    const [pdfURL, setpdfURL] = useState(DownloadResource())
+
     const getWindowDimensions = () => {
         const { innerWidth: width, innerHeight: height } = window;
         return ({
@@ -42,7 +59,7 @@ export const Resume = props => {
             <Document file="https://portfolio-yep.s3.amazonaws.com/matthew+barnes+-+resume.pdf" className="resume-pdf">
                 <Page pageNumber={1} height={windowDimensions.height - 75}/>
             </Document>
-            <a id="resume-dl-link" href="https://portfolio-yep.s3.amazonaws.com/matthew+barnes+-+resume.pdf" download="matthew-barnes.pdf" target="_blank">download me</a>
+            <a id="resume-dl-link" href={pdfURL} download="Matthew Barnes-resume.pdf">download me</a>
             <span id="close-resume" onClick={() => props.setresumeModalVisible(!props.setresumeModalVisible)}>&times;</span>
         </div>   
     ) 

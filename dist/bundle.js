@@ -315,6 +315,10 @@ function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Sy
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 
 
 
@@ -335,6 +339,60 @@ var Resume = function Resume(props) {
     }
   });
 
+  var DownloadResource = /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+      var url,
+          filename,
+          linkElement,
+          response,
+          blobUrl,
+          _args = arguments;
+      return regeneratorRuntime.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              url = _args.length > 0 && _args[0] !== undefined ? _args[0] : "https://portfolio-yep.s3.amazonaws.com/matthew+barnes+-+resume.pdf";
+              filename = _args.length > 1 && _args[1] !== undefined ? _args[1] : "matthew-barnes-resume.pdf";
+              linkElement = document.getElementById('resume-dl-link');
+              if (!filename) filename = url.split('\\').pop().split('/').pop();
+              _context.next = 6;
+              return fetch(url, {
+                headers: new Headers({
+                  'Origin': location.origin
+                }),
+                mode: 'cors'
+              }).then(function (resp) {
+                return resp.blob();
+              });
+
+            case 6:
+              response = _context.sent;
+              _context.next = 9;
+              return window.URL.createObjectURL(response);
+
+            case 9:
+              blobUrl = _context.sent;
+              linkElement.href = blobUrl;
+              return _context.abrupt("return", blobUrl);
+
+            case 12:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+
+    return function DownloadResource() {
+      return _ref.apply(this, arguments);
+    };
+  }();
+
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(DownloadResource()),
+      _useState2 = _slicedToArray(_useState, 2),
+      pdfURL = _useState2[0],
+      setpdfURL = _useState2[1];
+
   var getWindowDimensions = function getWindowDimensions() {
     var _window = window,
         width = _window.innerWidth,
@@ -345,10 +403,10 @@ var Resume = function Resume(props) {
     };
   };
 
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(getWindowDimensions()),
-      _useState2 = _slicedToArray(_useState, 2),
-      windowDimensions = _useState2[0],
-      setWindowDimensions = _useState2[1];
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(getWindowDimensions()),
+      _useState4 = _slicedToArray(_useState3, 2),
+      windowDimensions = _useState4[0],
+      setWindowDimensions = _useState4[1];
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     var handleResize = function handleResize() {
@@ -371,9 +429,8 @@ var Resume = function Resume(props) {
     height: windowDimensions.height - 75
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
     id: "resume-dl-link",
-    href: "https://portfolio-yep.s3.amazonaws.com/matthew+barnes+-+resume.pdf",
-    download: "matthew-barnes.pdf",
-    target: "_blank"
+    href: pdfURL,
+    download: "Matthew Barnes-resume.pdf"
   }, "download me"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
     id: "close-resume",
     onClick: function onClick() {
