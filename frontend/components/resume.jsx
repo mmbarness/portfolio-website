@@ -39,10 +39,10 @@ export const Resume = props => {
         
     return(
         <div id="resume-modal" className={`resume-modal-${props.resumeModalVisible ? "is-open" : "close"}`}>
-            <Document file="https://portfolio-yep.s3.amazonaws.com/Matthew+Barnes-+Resume.pdf" className="resume-pdf">
+            <Document file="https://portfolio-yep.s3.amazonaws.com/matthew+barnes+-+resume.pdf" className="resume-pdf">
                 <Page pageNumber={1} height={windowDimensions.height - 75}/>
             </Document>
-            <a id="resume-dl-link" href="https://portfolio-yep.s3.amazonaws.com/Matthew+Barnes-+Resume.pdf" download="matthew-barnes.pdf" target="_blank">download me</a>
+            <a id="resume-dl-link" href="https://portfolio-yep.s3.amazonaws.com/matthew+barnes+-+resume.pdf" download="matthew-barnes.pdf" target="_blank">download me</a>
             <span id="close-resume" onClick={() => props.setresumeModalVisible(!props.setresumeModalVisible)}>&times;</span>
         </div>   
     ) 

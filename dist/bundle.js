@@ -364,14 +364,14 @@ var Resume = function Resume(props) {
     id: "resume-modal",
     className: "resume-modal-".concat(props.resumeModalVisible ? "is-open" : "close")
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_pdf_dist_esm_entry_webpack__WEBPACK_IMPORTED_MODULE_2__.Document, {
-    file: "https://portfolio-yep.s3.amazonaws.com/Matthew+Barnes-+Resume.pdf",
+    file: "https://portfolio-yep.s3.amazonaws.com/matthew+barnes+-+resume.pdf",
     className: "resume-pdf"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_pdf_dist_esm_entry_webpack__WEBPACK_IMPORTED_MODULE_2__.Page, {
     pageNumber: 1,
     height: windowDimensions.height - 75
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
     id: "resume-dl-link",
-    href: "https://portfolio-yep.s3.amazonaws.com/Matthew+Barnes-+Resume.pdf",
+    href: "https://portfolio-yep.s3.amazonaws.com/matthew+barnes+-+resume.pdf",
     download: "matthew-barnes.pdf",
     target: "_blank"
   }, "download me"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
