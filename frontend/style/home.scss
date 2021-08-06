@@ -15,6 +15,7 @@
     border-radius: 0.5em;
     grid-column: 1;
     grid-row: 1/span 2;
+    caret-color: transparent;
 }
 
 #bio-block {
@@ -27,6 +28,7 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 1;
+    caret-color: transparent;
 }
 
 #bio-block-header {
@@ -36,6 +38,7 @@
     align-self: center;
     grid-column-start: 2;
     grid-row-start: 1;
+    caret-color: transparent;
 }
 
 #bio-block-body-1 {
@@ -50,6 +53,7 @@
     grid-row-start: 3;
     display: grid;
     grid-template-columns: 10em 10em;
+    caret-color: transparent;
 }
 
 #page-buttons {
