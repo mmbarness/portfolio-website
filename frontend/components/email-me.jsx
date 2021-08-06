@@ -2,12 +2,20 @@ import React from 'react';
 import emailjs from 'emailjs-com';
 import '../style/email.scss'
 
-export const EmailMe = () => {
+export const EmailMe = (props) => {
 
-    const toggleSendButtonText = () => {
-        let btn = document.getElementById('send-email-btn')
-        (btn.value === "Send") ? btn.value = 'Sent!' : bbtn.value = 'Sent'
-    }
+    document.addEventListener("click", e => {
+        const emailModal = document.getElementById("email-modal")
+        if (emailModal.className === "email-modal-is-open"){
+            const clickOutside = !(emailModal.contains(e.target));
+            const emailBtn = document.getElementById('email-button')
+            if ((emailModal.className === "email-modal-is-open") && (clickOutside) && (!emailBtn.contains(e.target))) {
+                props.setemailModalVisible(!props.setemailModalVisible)
+                let modalScreen = document.getElementById('modal-screen');
+                modalScreen.style.display = "none";
+            }
+        }
+    })
 
     const sendEmail = async (e) => {
         e.preventDefault();
@@ -27,19 +35,21 @@ export const EmailMe = () => {
     }
 
     return (
-        <form id="contact-form" onSubmit={sendEmail}>
-            <h3 id="contact-header">email me!</h3>
-            <input type="hidden" name="contact_number" />
-            <label className="contact-form-label"><span>Name:</span>
-                <input type="text" name="user_name" />
-            </label>
-            <label className="contact-form-label"><span>(Your) Email:</span>
-                <input type="email" name="user_email" />
-            </label>
-            <label className="contact-form-label"><span>Message:</span>
-                <textarea id="contact-form-textarea" name="message" />
-            </label>
-            <input type="submit" value="Send" id="send-email-btn" className="page-button"/>
-        </form>
+        <div id="email-modal" className={`email-modal-${props.emailModalVisible ? "is-open" : "close"}`}>
+            <form id="contact-form" onSubmit={sendEmail}>
+                <span id="close-email" onClick={() => props.handleEmailModal()}>&times;</span>
+                <input type="hidden" name="contact_number" />
+                <label className="contact-form-label"><span>(Your) Name:</span>
+                    <input type="text" name="user_name" />
+                </label>
+                <label className="contact-form-label"><span>(Your) Email:</span>
+                    <input type="email" name="user_email" />
+                </label>
+                <label className="contact-form-label"><span>(Your) Message:</span>
+                    <textarea id="contact-form-textarea" name="message" />
+                </label>
+                <input type="submit" value="Send" id="send-email-btn" className="page-button"/>
+            </form>
+        </div>
   );
 }

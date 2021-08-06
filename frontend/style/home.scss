@@ -1,13 +1,13 @@
 #home-container {
-    width: 60vw;
     padding: 4vh 10em 0em 10em;
     display: grid;
-    grid-template-columns: 33% 66%;
+    grid-template-columns: 15em 35em;
     grid-template-rows: auto auto;
     justify-items: center;
     justify-self: center;
     align-self: flex-start;
 }
+
 
 #headshot {
     width: 100%;
@@ -20,8 +20,8 @@
 #bio-block {
     padding: 2em;
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 0.25fr 0.75fr 0.25fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.25fr 0.75fr 0.5fr .5fr;
     font-family: "Inter";
     grid-column-start: 2;
     grid-column-end: 3;
@@ -34,7 +34,6 @@
     font-size: 1.75em;
     padding-bottom: 0.25em;
     align-self: center;
-    justify-self: center;
     grid-column-start: 2;
     grid-row-start: 1;
 }
@@ -45,6 +44,23 @@
     grid-column-start: 2;
     grid-row-start: 2;
 }
+
+#bio-block-p2 {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    display: grid;
+    grid-template-columns: 10em 10em;
+}
+
+#page-buttons {
+    grid-column-start: 2;
+    grid-row-start: 4;
+    display: flex;
+    flex-flow: column;
+    margin-top: 1em;
+    justify-self: flex-start;
+}
+
 .page-button:hover{
   cursor:pointer;
   background-color: #bad1db;
@@ -61,8 +77,6 @@
     font-weight: 400;
     border-radius: 0.5em;
     border: none;
-    width: 40%;
-    grid-column-start: 2;
-    grid-row-start: 3;
+    width: 10em;
 }
 

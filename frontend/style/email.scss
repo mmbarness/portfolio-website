@@ -1,20 +1,44 @@
+.email-modal-close{
+    display: none;
+}
+
+.email-modal-is-open{
+    z-index: 5;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-self: center;
+    background-color: white;
+    border-radius: 1em;
+    padding: 0.5em 1em 1em 1em;
+    height: fit-content;
+}
+
+#close-email{
+    height: fit-content;
+    align-self: flex-end;
+    margin-top: -.25em;
+}
+
+#close-email:hover{
+    cursor:pointer;
+    color:red;
+}
+
 #contact-form {
-    grid-column: 2;
-    grid-row: 2;
     display: flex;
     flex-flow: column;
     font-size: 1.25em;
     font-family: "Inter";
-    padding-top: 0.5em;
-    grid-column-start: 2;
-    grid-row-start: 4;
     margin: auto;
 }
 
 #contact-header{
     font-weight: 400;
     align-self: center;
-    padding-bottom: .25em;
+    margin-top: -.1em;
+    padding-bottom: .5em;
 }
 
 .contact-form-label{
@@ -25,7 +49,7 @@
     font-size: .75em;
 }
 .contact-form-label > span {
-    padding-right: .25em;
+    padding-right: 1em;
 }
 
 .contact-form-label > input{
@@ -35,6 +59,11 @@
 #contact-form-textarea{
     min-width: 15em;
     min-height: 4em;
+}
+
+#modal-screen{
+    background-color: black;
+    opacity: .1
 }
 
 // .page-button:hover{

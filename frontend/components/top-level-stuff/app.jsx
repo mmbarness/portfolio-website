@@ -22,6 +22,7 @@ const App = () => {
     <div id="umbrella-div">
       <Route path = "/" component={TopBar} location ={location}/>
       <Route path = "/" component={Footer} location ={location}/>
+      <div id="modal-screen"/>
       <Switch>
         <Route exact path = "/" component ={Home}/>
         <Route path="/404" component={NotFoundPage} />
