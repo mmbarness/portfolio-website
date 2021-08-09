@@ -1,36 +1,26 @@
 {
-  "name": "John Doe",
-  "birthDate": "12 Oct, 1983",
-  "country": "Russia",
-  "city": "Novosibirsk",
-  "languages": "English, Russian",
+  "name": "Matthew Barnes",
+  "birthDate": "Apr 14, 1993",
+  "country": "United States",
+  "city": "Brooklyn",
+  "languages": "English",
   "img": "/assets/img/I5q0uZFp8UQ.jpg",
   "avatar": "/assets/img/user.png",
-  "position": "frontend developer and designer",
-  "heroText": "I really love what I do and this is evident in my work and customer reviews",
+  "position": "fullstack engineer",
+  "heroText": "Fullstack engineer with frontend leanings. Former bartender and server in New York hospitality, so I like going to restaurants almost as much as I like to code",
   "cvLink": "/assets/img/cv.png",
-  "phone": "+79529111015",
-  "email": "example@mail.com",
+  "phone": "3152129076",
+  "email": "011mbarnes@gmail.com",
   "social": [
     {
       "id": 1,
-      "title": "Instagram",
+      "title": "LinkedIn",
       "link": "https://www.instagram.com/"
     },
     {
       "id": 2,
       "title": "Facebook",
       "link": "https://www.facebook.com/"
-    },
-    {
-      "id": 3,
-      "title": "Behance",
-      "link": "https://www.behance.net/"
-    },
-    {
-      "id": 4,
-      "title": "LinkedIn",
-      "link": "https://linkedin.com/"
     }
   ],
   "achievements": [

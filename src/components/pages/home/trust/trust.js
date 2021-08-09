@@ -4,9 +4,7 @@ import TrustContext from "../../../../context/trust/trust-context"
 const Trust = ({trust}) => {
     const trustContext = useContext(TrustContext)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    useEffect(() => {
-        trustContext.getTrust()
-    }, [trustContext])
+    useEffect( () => {trustContext.getTrust() },[trustContext])
     const {trust: {logos, testimonials}, loading} = trustContext
     if (loading) return <p>Loading...</p>
 
@@ -14,8 +12,8 @@ const Trust = ({trust}) => {
         <div className="they-trust py-5 py-lg-6">
             <div className="container">
 
-
                 <h2>They are trust me</h2>
+
                 <div className="row align-items-center mb-5">
                     {logos && logos.map((logo, key) => (
                         <div className="col-4 col-md-3 col-lg-2 mb-4" key={key}>

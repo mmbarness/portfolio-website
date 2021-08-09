@@ -6,7 +6,7 @@ import './home.scss'
 import Experience from "./experience/experience"
 import ExperienceState from "../../../context/experience/experience-state"
 import TrustState from "../../../context/trust/trust-state"
-import Trust from "./trust/trust"
+// import Trust from "./trust/trust"
 import Education from "./education/education"
 import Skills from "./skills/skills"
 
@@ -29,7 +29,7 @@ const Home = () => {
             </ExperienceState>
 
             <TrustState>
-                <Trust/>
+                {/* <Trust/> */}
                 <div className="container pb-5 pb-lg-6">
                     <div className="row">
                         <div className="col-lg-6">
