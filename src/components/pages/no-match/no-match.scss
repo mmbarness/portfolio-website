@@ -1,0 +1,9 @@
+.no-match-header {
+  font-size: 8rem;
+  margin-top: 10rem;
+
+  @media (max-width: 767px) {
+    font-size: 4rem;
+    margin-top: 5rem;
+  }
+}

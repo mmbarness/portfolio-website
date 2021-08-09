@@ -1,0 +1,94 @@
+[
+  {
+    "company": "Sirena Travel",
+    "url": "sirena-travel.ru",
+    "startDate": "Feb 9, 2019",
+    "endDate": "now",
+    "position": "Frontend Developer",
+    "aboutPosition": [
+      {
+        "name": "Responsibility:",
+        "options": [
+          "ui development",
+          "frontend development"
+        ]
+      },
+      {
+        "name": "Technology Stack:",
+        "options": [
+          "Framework: Angular, Bootstrap",
+          "Languages: JavaScript, TypeScript, Scss, HTML"
+        ]
+      },
+      {
+        "name": "Development Environments:",
+        "options": [
+          "Webstorm, SublimeText, Figma",
+          "Webpack"
+        ]
+      },
+      {
+        "name": "Project / Version Management System:",
+        "options": [
+          "JIRA, Gitlab"
+        ]
+      }
+    ],
+    "duties": {
+      "title": "My duties included:",
+      "options": [
+        "development of web application components;",
+        "routing;",
+        "validation of forms;",
+        "sending requests to the server and processing responses;",
+        "data visualization, graphing;",
+        "convert psd (or other types of layouts) to html."
+      ]
+    }
+  },
+  {
+    "company": "ANKO Technologies Corp",
+    "url": "ankocorp.com",
+    "startDate": "Feb 20, 2015",
+    "endDate": "Jan 10, 2019",
+    "position": "Frontend Developer",
+    "aboutPosition": [
+      {
+        "name": "Responsibility:",
+        "options": [
+          "ui development",
+          "frontend development"
+        ]
+      },
+      {
+        "name": "Technology Stack:",
+        "options": [
+          "Framework: AngularJS, ReactJS, Wordpress, Bootstrap",
+          "Languages: JavaScript, TypeScript, Scss, Less, HTML"
+        ]
+      },
+      {
+        "name": "Development Environments:",
+        "options": [
+          "Webstorm, SublimeText, Photoshop, Zeplin",
+          "Other: Webpack, Gulp"
+        ]
+      },
+      {
+        "name": "Project / Version Management System:",
+        "options": [
+          "JIRA, Gitlab, Github, Bitbucket"
+        ]
+      }
+    ],
+    "duties": {
+      "title": "My duties included:",
+      "options": [
+        "convert psd (or other types of layouts) to html;",
+        "development of web application components;",
+        "data visualization;",
+        "Wordpress template design/development."
+      ]
+    }
+  }
+]

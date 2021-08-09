@@ -1,0 +1,88 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+$grid-gutter-width: 30px;
+$grid-columns: 12;
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 1023px, xl: 1366px);
+$container-max-widths: (sm: 540px, md: 720px, lg: 980px, xl: 1300px);
+
+$gutter: $grid-gutter-width;
+
+$font-family-base: 'Source Sans Pro', sans-serif;
+$h1-font-size: 72px;
+$h2-font-size: 48px;
+$h3-font-size: 28px;
+$h4-font-size: 20px;
+$h5-font-size: 1rem;
+
+$headings-line-height: 1;
+$headings-font-weight: 600;
+
+$body-color: $black;
+$dark: $body-color;
+$text-muted: rgba(0,0,0,.3);
+$blue: #1A0DAB;
+$warning: #FDD700;
+$primary: $body-color;
+
+$link-color: $blue;
+$link-decoration: underline;
+$link-hover-decoration: none;
+
+$theme-colors: ();
+$theme-colors: map-merge(
+    (
+      "primary": $primary,
+      "secondary": $secondary,
+      "success": $success,
+      "info": $info,
+      "warning": $warning,
+      "danger": $danger,
+      "light": $light,
+      "dark": $dark
+    ),
+    $theme-colors
+);
+
+$spacers: map-merge(
+    (
+      0: 0,
+      1: ($spacer * .25),
+      2: ($spacer * .5),
+      3: $spacer,
+      4: ($spacer * 1.5),
+      5: ($spacer * 4),
+      6: ($spacer * 4)
+    ),
+    $spacers
+);
+
+$navigation-height: 70px;
+
+//form
+$custom-control-indicator-size: $font-size-base;
+$input-height: 4rem;
+$input-padding-y: 1rem;
+$input-padding-x: 1.3rem;
+$input-border-radius: $border-radius;
+$input-placeholder-color: rgba(0,0,0,.3);
+$input-bg: transparent;
+$input-border-color: $black;
+$input-border-radius: 0;
+$input-focus-bg: $input-bg;
+$input-focus-border-color: $input-border-color;
+$input-focus-box-shadow: none;
+
+//buttons
+$btn-border-radius: 2px;
+$btn-padding-x: 2rem;
+$btn-padding-y: 1rem;
+$btn-font-weight: 700;
+
+//progress
+$progress-height: 2rem;
+$progress-border-radius: 0;
+$progress-font-size: 1rem;
+
+//other
+$link-styled-size: 40px;

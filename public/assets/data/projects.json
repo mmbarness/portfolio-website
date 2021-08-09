@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "brand": "Dd",
+    "title": "More than just a web design",
+    "category": "Web Design",
+    "imgPreviewUrl": "/assets/img/projects/ronald-cuyan-434484-unsplash.jpg",
+    "bgColorClass": "bg-warning",
+    "projectDescription": "Lorem ipsum dolor sit amet",
+    "linkToProject": "/projects/project1"
+  },
+  {
+    "id": 2,
+    "brand": "The Way",
+    "title": "An application that will change your way of thinking",
+    "category": "Mobile App",
+    "imgPreviewUrl": "/assets/img/projects/luca-bravo-198061-unsplash.jpg",
+    "bgColorClass": "bg-white",
+    "projectDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti eligendi eum hic inventore officiis? Accusamus culpa deleniti est eum fuga laborum molestias necessitatibus reiciendis repellendus soluta, totam unde voluptate voluptatibus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequuntur ex quam tempore.",
+    "linkToProject": "/projects/project2"
+  },
+  {
+    "id": 3,
+    "brand": "The Wall",
+    "title": "Inspiring graphic design",
+    "category": "Web Design",
+    "imgPreviewUrl": "/assets/img/projects/jon-tyson-520955-unsplash.jpg",
+    "bgColorHex": "#212529",
+    "textColor": "text-light",
+    "projectDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti eligendi eum hic inventore officiis? Accusamus culpa deleniti est eum fuga laborum molestias necessitatibus reiciendis repellendus soluta, totam unde voluptate voluptatibus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequuntur ex quam tempore.",
+    "linkToProject": "/projects/project3"
+  }
+]

@@ -1,0 +1,29 @@
+.bg-image {
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center center !important;
+}
+
+.projects {
+  .navbar.bg-white {
+    &:not(.short) {
+      background: transparent !important;
+      .navbar-brand,
+      .nav-link {
+        color: #fff !important;
+        &:after {
+          background: #fff !important;
+        }
+      }
+
+      .navbar-toggler-icon {
+        background: #fff !important;
+
+        &:before,
+        &:after {
+          background: #fff !important;
+        }
+      }
+    }
+  }
+}

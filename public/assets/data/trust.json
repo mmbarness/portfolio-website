@@ -1,0 +1,85 @@
+{
+  "logos": [
+    "/assets/img/brands/armatura.svg",
+    "/assets/img/brands/saray.svg",
+    "/assets/img/brands/stolb.svg",
+    "/assets/img/brands/waves_flung.svg",
+    "/assets/img/brands/zelenui.svg"
+  ],
+  "testimonials": [
+    {
+      "name": "Anatoly Smith",
+      "id": 1,
+      "company": "ANKO Tech",
+      "position": "CEO",
+      "img": "/assets/img/drew-hays-agGIKYs4mYs-unsplash.jpg",
+      "text": "I worked with John the past 4 years. John is a brilliant developer with very large skills in frontend and SPA. We'll definitely work with him in the future."
+    },
+    {
+      "name": "Mark Stark",
+      "id": 2,
+      "company": "Woodoo Corp",
+      "position": "CEO",
+      "img": "/assets/img/jurica-koletic-efqnM0zWh54-unsplash.jpg",
+      "text": "John was a great developer. Could take little info and run with it. He always completed tasks ahead of schedule."
+    },
+    {
+      "name": "Richard Woo",
+      "id": 3,
+      "company": "Secure Lab",
+      "position": "CEO",
+      "img": "/assets/img/sander-weeteling-dq7Wlq_evnc-unsplash.jpg",
+      "text": "John is a top notch web designer, he is creative, punctual and communicates extremely well. I can only give him the highest recommendation to any future employers."
+    }
+  ],
+  "education": [
+    {
+      "company": "Novosibirsk State \nTechnical University",
+      "id": 1,
+      "startDate": "Feb 2015",
+      "endDate": "Jan 2019",
+      "speciality": "Faculty of Software of computer equipment and automated systems",
+      "description": "He graduated with honors from retraining, defended his diploma and received the specialty of a programmer"
+    },
+    {
+      "company": "Novosibirsk College \nof Electronics",
+      "id": 2,
+      "startDate": "Feb 2015",
+      "endDate": "Jan 2019",
+      "speciality": "Faculty of Microelectronics and Solid State Electronics",
+      "description": "Successfully completed his studies and received the specialty of a senior technician \nin microelectronics and solid-state electronics"
+    }
+  ],
+  "skills": [
+    {
+      "id": 1,
+      "name": "JavaScript",
+      "count": "70"
+    },
+    {
+      "id": 2,
+      "name": "Angular",
+      "count": "70"
+    },
+    {
+      "id": 3,
+      "name": "React",
+      "count": "40"
+    },
+    {
+      "id": 4,
+      "name": "Html/Css",
+      "count": "90"
+    },
+    {
+      "id": 5,
+      "name": "Photoshop",
+      "count": "60"
+    },
+    {
+      "id": 6,
+      "name": "Figma",
+      "count": "60"
+    }
+  ]
+}

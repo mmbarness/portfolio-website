@@ -1,0 +1,18 @@
+.project-preview {
+  display: block;
+  text-decoration: none;
+
+  > .container {
+    > .row {
+      background: no-repeat 70% bottom/cover;
+      min-height: 50vh;
+      box-shadow: 0 1.5rem 5rem rgba(0,0,0,.15);
+    }
+  }
+
+  &__text {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+}

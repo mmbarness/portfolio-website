@@ -1,0 +1,16 @@
+@import "../../../styles/vars";
+
+.list-unstyled {
+  line-height: 3rem;
+  font-size: $h4-font-size;
+  font-weight: $font-weight-light;
+
+  @media screen and (max-width: 991px) {
+    margin-right: -$grid-gutter-width/2;
+
+    > li {
+      display: inline-block;
+      margin-right: $grid-gutter-width/2;
+    }
+  }
+}

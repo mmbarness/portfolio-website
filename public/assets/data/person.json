@@ -1,0 +1,40 @@
+{
+  "name": "John Doe",
+  "birthDate": "12 Oct, 1983",
+  "country": "Russia",
+  "city": "Novosibirsk",
+  "languages": "English, Russian",
+  "img": "/assets/img/I5q0uZFp8UQ.jpg",
+  "avatar": "/assets/img/user.png",
+  "position": "frontend developer and designer",
+  "heroText": "I really love what I do and this is evident in my work and customer reviews",
+  "cvLink": "/assets/img/cv.png",
+  "phone": "+79529111015",
+  "email": "example@mail.com",
+  "social": [
+    {
+      "id": 1,
+      "title": "Instagram",
+      "link": "https://www.instagram.com/"
+    },
+    {
+      "id": 2,
+      "title": "Facebook",
+      "link": "https://www.facebook.com/"
+    },
+    {
+      "id": 3,
+      "title": "Behance",
+      "link": "https://www.behance.net/"
+    },
+    {
+      "id": 4,
+      "title": "LinkedIn",
+      "link": "https://linkedin.com/"
+    }
+  ],
+  "achievements": [
+    {"title": "Winning Design Competition for StarTrackDb.com"},
+    {"title": "Second place in the contest \"The best application based on BEM\""}
+  ]
+}
