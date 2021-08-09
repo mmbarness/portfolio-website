@@ -32,7 +32,7 @@ export const Resume = props => {
             }
         ).then(resp => resp.blob())
         let blobUrl = await window.URL.createObjectURL(response);
-        linkElement.href=blobUrl
+        if (linkElement) {linkElement.href= blobUrl}
         return blobUrl
     }
 

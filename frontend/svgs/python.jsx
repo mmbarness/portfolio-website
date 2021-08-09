@@ -39,66 +39,66 @@ export const PythonSVG = () => (
       <linearGradient
          id="linearGradient2795">
          <stop
-            style="stop-color:#b8b8b8;stop-opacity:0.49803922"
+            style="stopColor:#b8b8b8;stop-opacity:0.49803922"
             offset="0"
             id="stop2797" />
          <stop
-            style="stop-color:#7f7f7f;stop-opacity:0"
+            style="stopColor:#7f7f7f;stop-opacity:0"
             offset="1"
             id="stop2799" />
       </linearGradient>
       <linearGradient
          id="linearGradient2787">
          <stop
-            style="stop-color:#7f7f7f;stop-opacity:0.5"
+            style="stopColor:#7f7f7f;stop-opacity:0.5"
             offset="0"
             id="stop2789" />
          <stop
-            style="stop-color:#7f7f7f;stop-opacity:0"
+            style="stopColor:#7f7f7f;stop-opacity:0"
             offset="1"
             id="stop2791" />
       </linearGradient>
       <linearGradient
          id="linearGradient3676">
          <stop
-            style="stop-color:#b2b2b2;stop-opacity:0.5"
+            style="stopColor:#b2b2b2;stop-opacity:0.5"
             offset="0"
             id="stop3678" />
          <stop
-            style="stop-color:#b3b3b3;stop-opacity:0"
+            style="stopColor:#b3b3b3;stop-opacity:0"
             offset="1"
             id="stop3680" />
       </linearGradient>
       <linearGradient
          id="linearGradient3236">
          <stop
-            style="stop-color:#f4f4f4;stop-opacity:1"
+            style="stopColor:#f4f4f4;stop-opacity:1"
             offset="0"
             id="stop3244" />
          <stop
-            style="stop-color:#ffffff;stop-opacity:1"
+            style="stopColor:#ffffff;stop-opacity:1"
             offset="1"
             id="stop3240" />
       </linearGradient>
       <linearGradient
          id="linearGradient4671">
          <stop
-            style="stop-color:#ffd43b;stop-opacity:1"
+            style="stopColor:#ffd43b;stop-opacity:1"
             offset="0"
             id="stop4673" />
          <stop
-            style="stop-color:#ffe873;stop-opacity:1"
+            style="stopColor:#ffe873;stop-opacity:1"
             offset="1"
             id="stop4675" />
       </linearGradient>
       <linearGradient
          id="linearGradient4689">
          <stop
-            style="stop-color:#5a9fd4;stop-opacity:1"
+            style="stopColor:#5a9fd4;stop-opacity:1"
             offset="0"
             id="stop4691" />
          <stop
-            style="stop-color:#306998;stop-opacity:1"
+            style="stopColor:#306998;stop-opacity:1"
             offset="1"
             id="stop4693" />
       </linearGradient>
