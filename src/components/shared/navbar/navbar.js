@@ -6,7 +6,7 @@ import './navbar.scss'
 
 const Navbar = (props) => {
     let scrollPos = 0
-    let altCvLink = false
+    // let altCvLink = false
     const [navActive, setNavActive] = useState(false)
     const [isHide, setIsHide] = useState(false)
     const [isHome, setIsHome] = useState(false)
