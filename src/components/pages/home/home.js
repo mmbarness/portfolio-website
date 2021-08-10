@@ -30,6 +30,7 @@ const Home = () => {
 
             <TrustState>
                 {/* <Trust/> */}
+                <div id="modal-screen"/>
                 <div className="container pb-5 pb-lg-6">
                     <div className="row">
                         <div className="col-lg-6">

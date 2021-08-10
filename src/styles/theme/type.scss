@@ -1,9 +1,7 @@
 h1 {
   margin-top: $grid-gutter-width;
   margin-bottom: $grid-gutter-width*2;
-  //font-weight: 400;
   line-height: 1;
-
   @include media-breakpoint-down(md) {
     font-size: $h1-font-size/2.25;
   }
@@ -35,23 +33,27 @@ h4, .h4, h5, .h5, h6, .h6 {
 }
 
 #hero-grid{
-    margin-top: $grid-gutter-width;
-  margin-bottom: $grid-gutter-width*2;
-  //font-weight: 400;
-  line-height: 1;
-
-  @include media-breakpoint-down(md) {
-    font-size: $h1-font-size/1.9;
+  @media (min-width: 300px) and (max-width: 899px) {
+    margin-top: $grid-gutter-width - 300;
   }
-  padding-top: 3rem;
+  @media (min-width: 900px) and (max-width: 1500px) {
+    margin-top: $grid-gutter-width - 150;
+    grid-column-gap: 10px;
+  }
+  @media (min-width: 1441px) and (max-width: 2600px) {
+    margin-top: $grid-gutter-width - 1000;
+    grid-column-gap: 10px;
+  }
+  margin-bottom: $grid-gutter-width;
+  line-height: 1;
   display: grid;
   grid-template-columns: 1.5fr .25fr;
 }
 
 #hero-grid-img{
-  // margin-top: 10em;
   grid-column-start: 2;
   grid-row-start: 1;
+  grid-row-end: 3;
 }
 
 .hero-col-1{
@@ -61,6 +63,30 @@ h4, .h4, h5, .h5, h6, .h6 {
 
 .flex-wrap{
   grid-column-start: 1;
+}
+
+.mt-auto, .my-auto {
+  margin-top: 40em;
+}
+
+#resume-button{
+  grid-column-start: 2;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  justify-self: center;
+  padding: 0.5em;
+  margin-top: 3em;
+  background-color: #738F9B;
+  color: white;
+  font-weight: 300;
+  border-radius: 0.5em;
+  border: none;
+  width: 5em;
+  height: 2.5em;
+}
+
+#resume-button:hover{
+  background-color: #bad1db;
 }
 
 .big-text {
