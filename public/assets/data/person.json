@@ -7,7 +7,7 @@
   "img": "/assets/img/I5q0uZFp8UQ.jpg",
   "avatar": "/assets/img/user.png",
   "position": "fullstack engineer",
-  "heroText": "Fullstack engineer with frontend leanings. Former bartender and server in New York hospitality, so I like going to restaurants almost as much as I like to code",
+  "heroText": "I'm Matthew Barnes. Fullstack engineer with frontend leanings. Former bartender and server in New York hospitality, so I like going to restaurants almost as much as I like to code",
   "cvLink": "/assets/img/cv.png",
   "phone": "3152129076",
   "email": "011mbarnes@gmail.com",
@@ -15,16 +15,15 @@
     {
       "id": 1,
       "title": "LinkedIn",
-      "link": "https://www.instagram.com/"
+      "link": "https://www.linkedin.com/in/matthew-barnes-61162b64/"
     },
     {
       "id": 2,
-      "title": "Facebook",
-      "link": "https://www.facebook.com/"
+      "title": "GitHub",
+      "link": "https://github.com/mmbarness/"
     }
   ],
   "achievements": [
-    {"title": "Winning Design Competition for StarTrackDb.com"},
-    {"title": "Second place in the contest \"The best application based on BEM\""}
+    null
   ]
 }

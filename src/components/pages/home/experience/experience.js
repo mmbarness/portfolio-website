@@ -27,25 +27,41 @@ const Experience = () => {
     return (
         <div className="experience bg-warning py-5 py-lg-6">
             <div className="container">
-                <h2>Work Experience <small className="d-block">({years} years and {month} month)</small></h2>
-
+                <h2>Projects</h2>
                 {experience && experience.map((exp, index) => {
                     return (
-                        <React.Fragment key={exp.company}>
+                        <React.Fragment key={exp.projectName}>
                             <hr className="mb-5"/>
                             <div className={`row ${index === experience.length - 1 ? '' : 'mb-5'}`} >
                                 <div className="col-lg-3">
                                     <h4 className="mb-0">
-                                        <a href={`https://${exp.url}`} rel="noreferrer noopener" target="_blank">{exp.company}</a>
+                                        <a href={exp.url} rel="noreferrer noopener" target="_blank">{exp.projectName}</a>
                                     </h4>
-                                    <p className="mt-2 small">{exp.startDate} — {exp.endDate}</p>
-                                    <p>{exp.position}</p>
+                                    {/* <p className="mt-2 small">{exp.startDate} — {exp.endDate}</p> */}
+                                    <p>{exp.projectType}</p>
+                                    <p>{exp.description}</p>
                                 </div>
 
                                 <div className="col-lg-9">
                                     <div className="row">
                                         <div className="col-md-5">
-                                            {exp.aboutPosition.map((item, key) => (
+                                            <h5>{exp.duties.title}</h5>
+                                            <ul>
+                                                {exp.bulletPoints.map((o, key) => <li key={key}>{o}</li>)}
+                                            </ul>
+                                            {/* {exp.aboutPosition.map((item, key) => (
+                                                <div className={`item-list ${key === exp.aboutPosition.length - 1 ? '' : 'mb-4'}`} key={key}>
+                                                    <h5>{item.name}</h5>
+                                                    <ul>
+                                                        {item.options.map((o, key) => <li key={key}>{o}</li>)}
+                                                    </ul>
+                                                </div>
+                                            ))} */}
+                                        </div>
+
+                                        <div className="col-md-7 item-list">
+
+                                             {exp.aboutPosition.map((item, key) => (
                                                 <div className={`item-list ${key === exp.aboutPosition.length - 1 ? '' : 'mb-4'}`} key={key}>
                                                     <h5>{item.name}</h5>
                                                     <ul>
@@ -53,14 +69,10 @@ const Experience = () => {
                                                     </ul>
                                                 </div>
                                             ))}
-                                        </div>
-
-                                        <div className="col-md-7 item-list">
-
-                                            <h5>{exp.duties.title}</h5>
+                                            {/* <h5>{exp.duties.title}</h5>
                                             <ul>
-                                                {exp.duties.options.map((o, key) => <li key={key}>{o}</li>)}
-                                            </ul>
+                                                {exp.bulletPoints.map((o, key) => <li key={key}>{o}</li>)}
+                                            </ul> */}
 
                                         </div>
                                     </div>

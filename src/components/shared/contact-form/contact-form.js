@@ -1,94 +1,60 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {Formik} from 'formik'
+import emailjs from 'emailjs-com'
 import './contact-form.scss'
 
 const ContactForm = () => {
-    /*return (
-        <React.Fragment>
-
-            <div className="alert alert-success" role="alert">
-                <b>Well done!</b> We will contact you soon.
-                <button type="button" className="close">
-                    <span>&times;</span>
-                </button>
-            </div>
-
-            <form className="form"
-                  autoComplete="off">
-                <div className="row">
-
-                    <div className="col-lg-6 form-group">
-                        <label htmlFor="Email" className="d-flex justify-content-between text-uppercase">
-                            Email
-                            <span className="text-danger small"
-                            >Please provide a valid email.</span>
-                        </label>
-                        <input type="email" className="form-control" name="email" id="email" required/>
-                    </div>
-                </div>
-                <div className="form-group">
-                    <label htmlFor="message" className="d-flex justify-content-between text-uppercase">
-                        Message
-                        <span className="text-danger small"
-                        >Please provide a message.</span>
-                    </label>
-                    <textarea className="form-control" name="message" id="message" rows="4" required/>
-                </div>
-                <div className="d-inline-block position-relative">
-                    <div className="position-absolute w-100 h-100"/>
-                    <button className="btn btn-primary"
-                            type="submit">
-                        Send message
-                    </button>
-                </div>
-            </form>
-
-        </React.Fragment>
-    )*/
-
     const initialValues = {email: '', message: ''}
+    const [emailSent, setemailSent] = useState(false)
 
     const validateFunc = values => {
         let errors = {}
-
         if (!values.email) {
             errors.email = 'Email is required!'
         } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
             errors.email = 'Please provide a valid email.';
         }
-
         if (!values.message) {
             errors.message = 'Please provide a message.'
         }
-
-        return errors;
+        if (!emailSent){
+            return errors;
+        } else {
+            return {}
+        }
     }
 
-    const onSubmit = (values, {setSubmitting, setValues}) => {
-        setTimeout(() => {
-            setSubmitting(false)
-            setValues({email: '', message: ''})
-        }, 4000)
+    const onSubmit = async (values, {setSubmitting, setValues}) => {
+        let form = document.getElementById('email-contact-form')
+        let submitButton = document.getElementById('send-email-btn')
+        emailjs.sendForm('service_sjnz7oq', 'template_d0507ef', form, 'user_qq0BsoTqEV0SBv3Iw0Lvk')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+        });
+        submitButton.value = 'Sending'
+        submitButton.innerText = "Sending";
+        await new Promise(r => setTimeout(r, 1000));
+        submitButton.value = 'Sent!'
+        submitButton.innerText = "Sent!"
+        submitButton.disabled = true
+        submitButton.style.backgroundColor = 'grey'
+        submitButton.style.pointerEvents = "none"
+        setSubmitting(false);
+        setemailSent(true)
+        setValues({email: '', message: ''})
     }
-
     return (
         <Formik initialValues={initialValues} validate={validateFunc} onSubmit={onSubmit}>
             {({values, errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting, isValid, setTouched}) => (
-
-                <form className="form" onSubmit={handleSubmit}>
-                    {isSubmitting && (
-                        <div className="alert alert-success" role="alert">
-                            <b>Well done!</b> We will contact you soon.
-                            <button type="button" className="close" onClick="submitTrigger = false">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                    )}
+                <form className="form" onSubmit={handleSubmit} id="email-contact-form">
+                    <input type="hidden" name="contact_number" />
 
                     <React.Fragment>
                         <div className="row">
                             <div className="col-md-6 form-group">
-                                <label htmlFor="Email" className="d-flex justify-content-between">
+                                <label htmlFor="Email" id="from_email" className="d-flex justify-content-between">
                                     Email
                                     {errors.email && touched.email && (
                                         <span className="text-danger small">{errors.email}</span>
@@ -111,7 +77,7 @@ const ContactForm = () => {
                                 )}
                             </label>
                             <textarea className="form-control" name="message" id="message" rows="4"
-                                      placeholder="How are you?"
+                                      placeholder="Say something"
                                       onChange={handleChange}
                                       onBlur={handleBlur}
                                       value={values.message}/>
@@ -121,7 +87,7 @@ const ContactForm = () => {
                             {!isValid && (
                                 <div className="position-absolute w-100 h-100" onMouseOver={() => {setTouched({email: true, message: true})}} />
                             )}
-                            <button className="btn btn-primary" type="submit">Send message</button>
+                            <button className="btn btn-primary" id="send-email-btn" type="submit">Send message</button>
                         </div>
                     </React.Fragment>
 

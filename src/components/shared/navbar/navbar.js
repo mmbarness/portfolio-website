@@ -49,10 +49,9 @@ const Navbar = (props) => {
                          `}>
                 <div className="container py-3">
                     <div className="d-flex justify-content-between align-items-center">
-                        <p className="m-0 w-50">
-                            I’m <b>{name}</b>:<br/>
-                            {position}
-                        </p>
+                        {/* <p className="m-0 w-50">
+                            I'm <b>{name}</b>: {position}
+                        </p> */}
 
                         <div className="d-flex align-items-center ml-auto">
                             <div className={`mr-5 ${isHome ? 'd-none' : ''}`}>
