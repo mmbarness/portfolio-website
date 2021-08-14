@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react"
 import "regenerator-runtime/runtime";
 import { pdfjs, Document, Page } from "react-pdf";
-// import { pdfjs, Document, Page,} from 'react-pdf/dist/esm/entry.webpack';
 import '../../../styles/theme/resume.scss'
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 
