@@ -10,7 +10,7 @@ export const Resume = props => {
 
     document.addEventListener("click", e => {
         const resumeModal = document.getElementById("resume-modal")
-        if (resumeModal.className === "resume-modal-is-open"){
+        if ((resumeModal) && (resumeModal.className === "resume-modal-is-open")){
             const clickOutside = !(resumeModal.contains(e.target));
             const resumeBtn = document.getElementById('resume-button')
             if ((resumeModal.className === "resume-modal-is-open") && (clickOutside) && (!resumeBtn.contains(e.target))) {

@@ -16,20 +16,28 @@ const SingleProject = (props) => {
             <div className="projects">
                 <div className="project">
 
-                    <div 
-                         style={{background: `url(${project.pictureLinks.home})`, minHeight: '50vh'}}>
+                    <div className="bg-image"
+                        style={{
+                            background: `url(${project.pictureLinks.home})`, 
+                            minHeight: '50vh',
+                            backgroundPosition: '0% 42.5%',
+                            backgroundRepeat: 'no-repeat',
+                            backgroundSize: 'cover',
+                            backgroundOrigin: 'content-box'
+                            // backgroundPosition: '0vh 4vh',
+                            }}>
                     </div>
 
-                    <div className="min-vh-100 d-flex justify-content-center align-items-center">
+                    <div className="project-description">
                         <div className="container">
-                            <div className="row">
+                            <div id="project-description-row">
                                 <div className="col-lg-4">
-                                    <h1>{project.tagLine}</h1>
+                                    <h1 id="project-tagline">{project.tagLine}</h1>
                                 </div>
                                 <div className="col-lg-7">
-                                    <h5 className="mb-2">Project description</h5>
                                     <p className="mb-4">
-                                        {project.longDescription}</p>
+                                        {project.longDescription}
+                                    </p>
                                     <h5 className="mb-2">Platforms:</h5>
                                     <p className="mb-4">Web</p>
                                 </div>

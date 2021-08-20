@@ -16,13 +16,13 @@ const Contact = () => {
             <>
                 <div className="container">
                     <div className="row min-vh-100">
-                        <div className="col-md-7 col-lg-6 d-flex align-items-start align-items-md-end pb-5 mr-auto">
+                        <div className="col-md-7 col-lg-6 d-flex align-items-start pb-5 mr-auto">
                             <div className="w-100 pr-lg-5">
-                                <h1 className="mb-5 mt-6">Contact, perhaps?</h1>
+                                <h1 className="mb-5 mt-6">email me ヽ(ー_ー )ノ</h1>
                                 <ContactForm/>
                             </div>
                         </div>
-                        <div className="col-md-5 d-flex align-items-end justify-content-end pb-5">
+                        <div className="col-md-5 d-flex justify-content-end pb-5">
                             <ul className="list-unstyled text-right">
                                 {social && social.map((s, key) => {
                                     return <li key={key}>

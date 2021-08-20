@@ -1,7 +1,9 @@
 .bg-image {
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-  background-position: center center !important;
+  background-image: url(https://portfolio-yep.s3.amazonaws.com/home-court-splash.png);
+  min-height: 50vh;
+  // background-repeat: no-repeat;
+  // background-size: 100%;
+  // background-position: 0vh 4vh;
 }
 
 .projects {
@@ -26,4 +28,24 @@
       }
     }
   }
+
+}
+
+.project-description{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+#project-tagline{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  line-height: 1;
+}
+
+#project-description-row{
+  padding: 2em 0em;
+  display: flex;
+  flex-wrap: wrap;
 }
