@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import './project-preview.scss'
 
 const ProjectPreview = ({project}) => {
+
     const {
         brand,
         title,
@@ -12,14 +13,15 @@ const ProjectPreview = ({project}) => {
         linkToProject
     } = project
 
-    return (
-        <Link className="project-preview mb-5 mb-md-7 block-link text-black pointer" to={linkToProject}>
+    // console.log(project);
 
+    return (
+        <Link className="project-preview mb-5 mb-md-7 block-link text-black pointer" to={linkToProject} state = {project}>
             <div className="container ">
                 <div className={`row ${textColor ? textColor : 'text-body'}`}
                      style={{backgroundImage: `url(${imgPreviewUrl})`}}>
 
-                    <div className="col-md-6 p-5 project-preview__text">
+                    {/* <div className="col-md-6 p-5 project-preview__text">
                         <div className="brand-logo h5">
                             {brand}
                         </div>
@@ -27,7 +29,7 @@ const ProjectPreview = ({project}) => {
                         <div className="project-category">
                             {category}
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 

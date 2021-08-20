@@ -13,7 +13,7 @@ const Contact = () => {
     const {person: {email, phone, social}} = personContext
     return (
         <div className="contact bg-warning nav-height-padding">
-            <React.Fragment>
+            <>
                 <div className="container">
                     <div className="row min-vh-100">
                         <div className="col-md-7 col-lg-6 d-flex align-items-start align-items-md-end pb-5 mr-auto">
@@ -30,7 +30,7 @@ const Contact = () => {
                                     </li>
                                 })}
                                 <li>
-                                    <Link to={`tel:${phone}`} className="h3 font-weight-light text-body">+7 (952) 911 10 15</Link>
+                                    <Link to={`tel:${phone}`} className="h3 font-weight-light text-body">(315) 212 9076</Link>
                                 </li>
                                 <li>
                                     <Link to={`mailto:${email}`}
@@ -40,7 +40,7 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
-            </React.Fragment>
+            </>
         </div>
     )
 }

@@ -17,12 +17,12 @@ const Home = () => {
     const {person} = personContext
 
     return (
-        <React.Fragment>
+        <>
             {person && (
-                <React.Fragment>
+                <>
                     <Hero person={person}/>
                     <BigImage person={person}/>
-                </React.Fragment>
+                </>
             )}
             <ExperienceState>
                 <Experience/>
@@ -43,7 +43,7 @@ const Home = () => {
                 </div>
             </TrustState>
 
-        </React.Fragment>
+        </>
     )
 }
 

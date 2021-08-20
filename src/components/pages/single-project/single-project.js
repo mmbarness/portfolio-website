@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
+import ProjectsContext from '../../../context/projects/projects-context'
 import './single-project.scss'
 
-const SingleProject = () => {
+const SingleProject = (props) => {
+
+    const projectsContext = useContext(ProjectsContext)
+    
+    // useEffect(() => {
+    //     projectsContext.getProjects()
+    //     // eslint-disable-next-line react-hooks/exhaustive-deps
+    // }, [])
+
+    // const {projects, loading} = projectsContext
+
+    console.log(projectsContext)
     return (
-        <React.Fragment>
             <div className="projects">
                 <div className="project">
 
@@ -73,7 +84,6 @@ const SingleProject = () => {
                 </div>
 
             </div>
-        </React.Fragment>
     )
 }
 
