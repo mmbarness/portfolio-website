@@ -56,9 +56,9 @@ const Navbar = (props) => {
                         <div className="d-flex align-items-center ml-auto">
                             <div className={`mr-5 ${isHome ? 'd-none' : ''}`}>
                                 {cvLink &&
-                                <Link to={cvLink} target="_blank" className={`link-styled ${isBgTransparent ? 'alt' : ''}`}>
+                                <a href="https://portfolio-yep.s3.amazonaws.com/matthew+barnes+-+resume.pdf" target="_blank" style={{textDecoration: "None"}} className={`link-styled ${isBgTransparent ? 'alt' : ''}`}>
                                     <span className="d-none d-md-inline">Download</span> CV
-                                </Link>
+                                </a>
                                 }
                             </div>
                             <div className="nav-toggle" onClick={() => {setNavActive(true)}}/>

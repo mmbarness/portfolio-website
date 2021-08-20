@@ -26,7 +26,7 @@ const Hero = ({person: {heroText, cvLink, social, email}}) => {
                                 <h1 className="mb-4 mt-0 hero-col-1">I'm Matthew Barnes, fullstack engineer with inclinations towards the front end.</h1>
                                 <h1 className="mb-4 mt-0 hero-col-1">Also, former bartender and server in New York hospitality. Strong opinions about spirits.</h1>
                                 {Resume({resumeModalVisible, setresumeModalVisible, handleResumeModal})}
-                                <button className='page-button link-styled' id="resume-button" onClick={()=> handleResumeModal()}>Resume</button>
+                                <button className='hero-col-2 mb-5 page-button link-styled' id="resume-button" onClick={()=> handleResumeModal()}>Resume</button>
                                 <div className="d-flex flex-wrap hero-col-1">
                                     {social && social.map(i => (
                                         <a key={i.id} href={i.link} className="mr-4 text-body d-inline" target="_blank">{i.title}</a>
