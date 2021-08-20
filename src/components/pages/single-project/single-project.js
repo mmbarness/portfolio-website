@@ -1,47 +1,35 @@
-import React, { useContext, useEffect } from 'react'
-import ProjectsContext from '../../../context/projects/projects-context'
+import React from 'react'
 import './single-project.scss'
+import ProjectData from '../projects/projects-data.json' 
 
 const SingleProject = (props) => {
 
-    const projectsContext = useContext(ProjectsContext)
-    
-    // useEffect(() => {
-    //     projectsContext.getProjects()
-    //     // eslint-disable-next-line react-hooks/exhaustive-deps
-    // }, [])
+    let projIdString = props.match.params.slug
+    let regTest = /^\d+$/;
+    let projId = parseInt(projIdString.split('').filter(ele => regTest.test(ele)))
 
-    // const {projects, loading} = projectsContext
+    let project = ProjectData.filter(proj => proj.id === projId)[0];
 
-    console.log(projectsContext)
+    console.log(project);
+
     return (
             <div className="projects">
                 <div className="project">
 
-                    <div className="min-vh-100 bg-image"
-                         style={{background: 'url(/assets/img/projects/austin-chan-275638-unsplash.jpg)'}}>
+                    <div 
+                         style={{background: `url(${project.pictureLinks.home})`, minHeight: '50vh'}}>
                     </div>
 
                     <div className="min-vh-100 d-flex justify-content-center align-items-center">
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-4">
-                                    <h1>From dirt to Kings</h1>
+                                    <h1>{project.tagLine}</h1>
                                 </div>
                                 <div className="col-lg-7">
                                     <h5 className="mb-2">Project description</h5>
-                                    <p className="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Deleniti eligendi eum hic
-                                        inventore officiis?
-                                        Accusamus culpa deleniti est eum fuga laborum molestias necessitatibus
-                                        reiciendis repellendus
-                                        soluta, totam
-                                        unde voluptate voluptatibus!Lorem ipsum dolor sit amet, consectetur adipisicing
-                                        elit. Blanditiis
-                                        consequuntur
-                                        ex quam tempore. </p>
-                                    <h5 className="mb-2">Services:</h5>
-                                    <p className="mb-4">Research, UX design, UI Design</p>
+                                    <p className="mb-4">
+                                        {project.longDescription}</p>
                                     <h5 className="mb-2">Platforms:</h5>
                                     <p className="mb-4">Web</p>
                                 </div>
@@ -52,33 +40,24 @@ const SingleProject = (props) => {
                     <div className="container">
                         <div className="row mb-5 mb-lg-6 align-items-center">
                             <div className="col-lg-8 order-1 order-lg-0">
-                                <img src="/assets/img/projects/water-journal-225046-unsplash.jpg" alt=""
+                                <img src={project.pictureLinks.secondPhoto} alt=""
                                      className="img-fluid"/>
                             </div>
                             <div className="col-lg-4 order-0 order-lg-1">
-                                <h2>Research</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur laborum omnis
-                                    sapiente. Assumenda
-                                    distinctio dolor ex fugit minima neque pariatur, quidem recusandae reprehenderit
-                                    similique, soluta, temporibus
-                                    ullam velit veniam voluptatem?</p>
+                                <h2>{project.partTwoTitle}</h2>
+                                <p>{project.partTwoDescription}</p>
                             </div>
                         </div>
 
                         <div className="row mb-5 mb-lg-6 align-items-center">
                             <div className="col-lg-4">
-                                <h2>UX design</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores beatae
-                                    consequuntur dolore ea eius eos error facilis ipsa iste modi, non nulla, omnis quas
-                                    sed sequi sit veritatis voluptate.</p>
+                                <h2>{project.partThreeTitle}</h2>
+                                <p>{project.partThreeDescription}</p>
                             </div>
                             <div className="col-lg-8">
-                                <img src="/assets/img/projects/proto_.png" alt="" className="img-fluid"/>
+                                <img src={project.pictureLinks.thirdPhoto} alt="" className="img-fluid"/>
                             </div>
                         </div>
-
-                        <h2>UI and branding</h2>
-                        <img src="/assets/img/projects/proto.png" alt="" className="img-fluid mb-5 mb-lg-6"/>
                     </div>
 
                 </div>

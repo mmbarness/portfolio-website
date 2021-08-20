@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "brand": "",
+    "title": "Home Court",
+    "category": "Team Lead",
+    "imgPreviewUrl": "https://portfolio-yep.s3.amazonaws.com/home-court-splash.png",
+    "bgColorClass": "bg-warning",
+    "projectDescription": "Application to allow users to find and join pickup sports games happening near them.",
+    "linkToProject": "/projects/project1",
+    "tagLine": "Pickup sports you can actually join",
+    "longDescription": "The idea was borne from wanting to play pickup sports without really knowing how to join. Sometimes it can all feel a little clique-y, and this app aims to change that. MERN stack project that incorporates Google Maps API.",
+    "partTwoTitle": "See the games happening near you",
+    "partTwoDescription": "This was a team effort, so I didn't work on every feature. Since I was team lead, I tended to focus on what might otherwise fall through the cracks. In this case, that was address search. I enjoyed implementing it, and made sure to do so as a functional component that easily slots within other components. This enabled us to use it with no revisions both where you see it here and within the user signup form.",
+    "partThreeTitle": "User Page",
+    "partThreeDescription": "Another component I worked on. The user page shows all events they've indicated they're attending, and allows them to unjoin if they like. If they do, the event disappears from the page like you'd expect, thanks to my canny implementation of useEffect.",
+    "pictureLinks": {
+      "home": "https://portfolio-yep.s3.amazonaws.com/home-court-splash.png",
+      "secondPhoto": "https://portfolio-yep.s3.amazonaws.com/home-court-typeahead.png",
+      "thirdPhoto": "https://portfolio-yep.s3.amazonaws.com/home-court-user-events.png"
+    }
+  },
+  {
+    "id": 2,
+    "brand": "",
+    "title": "Record Collector",
+    "category": "Fullstack",
+    "tagLine": "Buy the music directly from the artist",
+    "longDescription": "I love Bandcamp, because of how it facilitates and encourages an unmediated relationship between artist and fan, and I wanted to learn the ins and outs of cart and checkout management.",
+    "partTwoTitle": "Checkout",
+    "partTwoDescription": "One of the main reasons I was interested in Bandcamp. Cart items are stored on the backend and, upon login, brought into redux state to mitigate API calls.",
+    "partThreeTitle": "Album page",
+    "partThreeDescription": "Show page for albums, where they can be added to cart via a modal box. Like bandcamp, users are able to name their own price. The page layout is mostly accomplished with CSS grid, improving the responsiveness of the overall design.",
+    "imgPreviewUrl": "https://portfolio-yep.s3.amazonaws.com/rc-home.png",
+    "bgColorClass": "bg-white",
+    "projectDescription": "Bandcamp clone with cart checkout functionality, facilitated by Rails/Postgres/React/Redux",
+    "linkToProject": "/projects/project2",
+    "pictureLinks": {
+      "home": "https://portfolio-yep.s3.amazonaws.com/rc-home.png",
+      "secondPhoto": "https://portfolio-yep.s3.amazonaws.com/rc-checkout.png",
+      "thirdPhoto": "https://portfolio-yep.s3.amazonaws.com/rc-album-page.png"
+    }
+  },
+  {
+    "id": 3,
+    "brand": "",
+    "title": "Call Sheet",
+    "category": "100% JS, implemented with D3",
+    "tagLine": "Insights on your favorite director",
+    "longDescription": "This project really helps the user separate narrative from fact in interesting ways. You might, for example, think 'DeNiro' when you hear 'Scorsese', when you should really be thinking 'Schoonmaker'. Director's acquire reputations for the actors' they work with, and for good reason, but Call Sheet reveals that nine times out of ten, it's the crew they work with that they have the longest-lasting relationships with.",
+    "partTwoTitle": "Search Functionality",
+    "partTwoDescription": "Any director in the TMDB database - the same one used by letterboxd - is searchable. Upon successful search an icon will be added to the lefthand column to enable navigation between directors. Just as a small aside, the icons were the initial primary graphic, until I decided they were both less informative than the bubble chart and more attractive as icons.",
+    "partThreeTitle": "The explainer",
+    "partThreeDescription": "When you first navigate to the website, a little explainer pops up to make using the app a little easier. A small touch that I think greatly improves the experience.",
+    "imgPreviewUrl": "https://portfolio-yep.s3.amazonaws.com/call-sheet-main.png",
+    "bgColorHex": "#212529",
+    "textColor": "text-light",
+    "projectDescription": "Data visualizer for revealing any film director’s closest collaborators",
+    "linkToProject": "/projects/project3",
+    "pictureLinks": {
+      "home": "https://portfolio-yep.s3.amazonaws.com/call-sheet-main.png",
+      "secondPhoto": "https://portfolio-yep.s3.amazonaws.com/call-sheet-afterSearch.png",
+      "thirdPhoto": "https://portfolio-yep.s3.amazonaws.com/call-sheet-info-modal.png",
+      "popup": "https://portfolio-yep.s3.amazonaws.com/call-sheet-popup.png"
+    }
+  }
+]

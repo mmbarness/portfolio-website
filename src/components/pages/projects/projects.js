@@ -18,7 +18,6 @@ const Projects = () => {
                       </div>
                   </div>
               </div>
-
               <ProjectList />
               {/* <SingleProject/> */}
           </div>
