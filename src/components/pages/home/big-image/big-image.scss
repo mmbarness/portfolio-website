@@ -1,0 +1,8 @@
+@import "../../../../styles/vars";
+
+.f-screen-image {
+  width: 100%;
+  height: 100vh;
+  background: $gray-100 no-repeat center/cover;
+  background-attachment: fixed;
+}

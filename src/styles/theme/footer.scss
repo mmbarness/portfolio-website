@@ -1,0 +1,13 @@
+.footer {
+  padding: $grid-gutter-width*2 0;
+
+  a {
+    color: $white;
+  }
+
+  h2 {
+    @media screen and (max-width: 767px) {
+      font-size: 30px;
+    }
+  }
+}

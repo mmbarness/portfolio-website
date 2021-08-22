@@ -1,0 +1,49 @@
+[
+  {
+    "id": 1,
+    "brand": "",
+    "title": "Home Court",
+    "category": "Team Lead",
+    "imgPreviewUrl": "https://portfolio-yep.s3.amazonaws.com/home-court-splash.png",
+    "bgColorClass": "bg-warning",
+    "projectDescription": "Application to allow users to find and join pickup sports games happening near them.",
+    "linkToProject": "/projects/project1",
+    "pictureLinks": {
+      "home": "https://portfolio-yep.s3.amazonaws.com/home-court-home.png",
+      "splash": "https://portfolio-yep.s3.amazonaws.com/home-court-splash.png",
+      "userEvents": "https://portfolio-yep.s3.amazonaws.com/home-court-user-events.png"
+    }
+  },
+  {
+    "id": 2,
+    "brand": "",
+    "title": "Record Collector",
+    "category": "Fullstack",
+    "imgPreviewUrl": "https://portfolio-yep.s3.amazonaws.com/rc-home.png",
+    "bgColorClass": "bg-white",
+    "projectDescription": "Bandcamp clone with cart checkout functionality, facilitated by Rails/Postgres/React/Redux",
+    "linkToProject": "/projects/project2",
+    "pictureLinks": {
+       "home": "https://portfolio-yep.s3.amazonaws.com/rc-home.png",
+       "checkout": "https://portfolio-yep.s3.amazonaws.com/rc-checkout.png",
+       "albumPage": "https://portfolio-yep.s3.amazonaws.com/rc-album-page.png"
+    }
+  },
+  {
+    "id": 3,
+    "brand": "",
+    "title": "Call Sheet",
+    "category": "100% JS, implemented with D3",
+    "imgPreviewUrl": "https://portfolio-yep.s3.amazonaws.com/call-sheet-main.png",
+    "bgColorHex": "#212529",
+    "textColor": "text-light",
+    "projectDescription": "Data visualizer for revealing any film director’s closest collaborators",
+    "linkToProject": "/projects/project3",
+    "pictureLinks": {
+      "home": "https://portfolio-yep.s3.amazonaws.com/call-sheet-main.png" ,
+      "afterSearch": "https://portfolio-yep.s3.amazonaws.com/call-sheet-afterSearch.png",
+      "infoModal": "https://portfolio-yep.s3.amazonaws.com/call-sheet-info-modal.png",
+      "popup": "https://portfolio-yep.s3.amazonaws.com/call-sheet-popup.png"
+     }
+  }
+]

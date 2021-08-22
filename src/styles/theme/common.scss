@@ -1,0 +1,20 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  overflow-x: hidden;
+  caret-color: transparent;
+}
+
+#modal-screen {
+    display:none;
+    position: absolute;
+    background-color: black;
+    opacity: 0.4;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+}

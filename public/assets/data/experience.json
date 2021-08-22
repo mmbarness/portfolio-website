@@ -1,0 +1,136 @@
+[
+  {
+    "projectName": "Record Collector",
+    "url": "https://record-collector.matthewbarnes.tech/#/",
+    "startDate": "Feb 9, 2019",
+    "endDate": "now",
+    "position": "Frontend Developer",
+    "projectType": "Fullstack Bandcamp Clone",
+    "description": "Bandcamp clone with cart checkout functionality, facilitated by Rails/Postgres/React/Redux",
+    "aboutPosition": [
+      {
+        "name": "Tech Stack:",
+        "options": [
+          "Framework: Ruby on Rails, React, Redux",
+          "Libraries: Underscore",
+          "Languages: Ruby, JavaScript, SCSS, HTML"
+        ]
+      },
+      {
+        "name": "Development Environments:",
+        "options": [
+          "rbenv",
+          "Webpack"
+        ]
+      },
+      {
+        "name": "Project / Version Management System:",
+        "options": [
+          "Github"
+        ]
+      }
+    ],
+     "bulletPoints": [
+        "Implemented typeahead search functionality with a custom rails controller action and the react-bootstrap-typeahead node package, ensuring the user only navigates to existing artist and album pages and eliminates the chance of typos.",
+        "For user carts, wrote a cart items joins table and used ActiveRecord to create an association between albums and users, while only assembling the actual cart in redux state. This solution requires a smaller backend footprint overall and fewer net API calls.",
+        "Integrated a pre-existing personal music server running on Docker for additional seed data and playback functionality, merging the data from the two sources, database and music server, in redux state."
+      ],
+    "duties": {
+      "title": "Key features:",
+      "options": [
+        "development of web application components;",
+        "routing;",
+        "validation of forms;",
+        "sending requests to the server and processing responses;",
+        "data visualization, graphing;",
+        "convert psd (or other types of layouts) to html."
+      ]
+    }
+  },
+  {
+    "projectName": "Call Sheet",
+    "url": "http://call-sheet.matthewbarnes.tech/",
+    "startDate": "Feb 20, 2015",
+    "endDate": "Jan 10, 2019",
+    "position": "Frontend Developer",
+    "projectType": "Data Vizualization",
+    "description": "Data visualizer meant to illustrate any film director’s closest collaborators",
+    "aboutPosition": [
+      {
+        "name": "Tech Stack:",
+        "options": [
+          "Framework: Node",
+          "Libraries: D3, Underscore",
+          "Languages: JavaScript, SCSS, HTML"
+        ]
+      },
+      {
+        "name": "Development Environments:",
+        "options": [
+          "Webpack"
+        ]
+      },
+      {
+        "name": "Project / Version Management System:",
+        "options": ["Github"]
+      }
+    ],
+    "bulletPoints": [
+      "Leveraged a movie database api to enable users to search for and compare bubble charts representing a given director’s closest collaborators.",
+      "Entirely custom search feature with regex testing of queries for robust error prevention.",
+      "Adopted functional programming techniques, from examples like React hooks, for common tasks like generating DOM elements to decouple disparate components.",
+      "Made extensive use of ES6 async/await and fetch to avoid unnecessary dependencies."
+    ],
+    "duties": {
+      "title": "Key features:",
+      "options": [
+        "convert psd (or other types of layouts) to html;",
+        "development of web application components;",
+        "data visualization;",
+        "Wordpress template design/development."
+      ]
+    }
+  },
+  {
+    "projectName": "Home Court",
+    "url": "http://www.homecourt.club/",
+    "startDate": "Feb 20, 2015",
+    "endDate": "Jan 10, 2019",
+    "position": "Team Lead",
+    "projectType": "Social Network and Event Planner",
+    "description": "Application to allow users to find and join pickup sports games happening near them.",
+    "aboutPosition": [
+      {
+        "name": "Tech Stack:",
+        "options": [
+          "Framework: MongoDB, Express, ReactJS, Node, Redux",
+          "Libraries: Underscore",
+          "Languages: JavaScript, SCSS, HTML"
+        ]
+      },
+      {
+        "name": "Development Environments:",
+        "options": ["Webpack"]
+      },
+      {
+        "name": "Project / Version Management System:",
+        "options": ["Github"]
+      }
+    ],
+    "bulletPoints": [
+      "Managed a four-person effort to integrate google maps API with a fast noSQL/node.js backend and React/Redux frontend.",
+      "Generated a combobox address search typeahead as an independent component so that it could be implemented at several places across the website.",
+      "Wrote React components as hooks and used useEffect with an empty dependency array to achieve functionality similar to componentDidMount, and elsewhere passed into the dependency array a portion of the page url to ensure page re-render when navigating from one artist page to another.",
+      "Applied hooks to cut down on boilerplate code, implementing useSelector and useDispatch to pull slices of state and dispatch in place of writing a component container for mapStateToProps and mapDispatchToProps."
+    ],
+    "duties": {
+      "title": "Key features:",
+      "options": [
+        "convert psd (or other types of layouts) to html;",
+        "development of web application components;",
+        "data visualization;",
+        "Wordpress template design/development."
+      ]
+    }
+  }
+]

@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Documentation</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">Itog documentation</a>
+
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#prerequisites">prerequisites</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#filestructure">file structure</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#staticfiles">static files</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#components">components</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div id="prerequisites" class="container py-5">
+  <p>Thank you for choosing our application!</p>
+  <p>This project was developed with <a href="https://github.com/facebook/create-react-app" target="_blank">Create React App</a></p>
+  <h4>Prerequisites</h4>
+  <p>Before you begin, make sure your development environment includes Node.js® and an npm package manager.</p>
+  <h5>Node.js</h5>
+  <p>React requires <code>Node.js</code> version >= 8.10 on your local development machine (but it’s not required on the server).</p>
+  <ul>
+    <li>
+      <p>To check your version, run <code>node -v</code> in a terminal/console window.</p>
+    </li>
+    <li>
+      <p>To get <code>Node.js</code>, go to <a href="https://nodejs.org" title="Nodejs.org">nodejs.org</a>.</p>
+    </li>
+  </ul>
+  <p>Then you need to install all the dependencies. To do this, in the terminal / console window, run <code>npm
+    install</code></p>
+  <p class="text-danger"><b>All commands run in the project folder!</b></p>
+  <h4>Development server</h4>
+  <p>Run <code>npm start</code> for a dev server. Navigate to <code>http://localhost:3000/</code>. The app will
+    automatically reload if you change any of the source files.</p>
+  <h4>Build</h4>
+  <p>Run <code>npm run build</code> to build the project. The build artifacts will be stored in the <code>build/</code>
+    directory.</p>
+  <p>After that, your application will be ready for upload to the server. If you have any problems you can read this
+    article
+    <a href="https://facebook.github.io/create-react-app/docs/deployment">React App Deployment</a>.</p>
+  <hr>
+  <h2 id="filestructure">File structure</h2>
+  <br>
+  <div class="row">
+    <div class="col-md-3">
+      <img class="img-fluid" src="img/files.png" alt="">
+    </div>
+    <div class="col-md-9">
+      <h4>package.json</h4>
+      <p>All npm packages used in the application</p>
+      <br>
+      <h4>src</h4>
+      <p>Application source</p>
+      <br>
+      <h4>public</h4>
+      <p>Static files such as images or json data</p>
+    </div>
+  </div>
+  <hr>
+  <h2 id="staticfiles">Static files</h2>
+  <div class="row">
+    <div class="col-md-3">
+      <img class="img-fluid" src="img/assets.png" alt="">
+    </div>
+    <div class="col-md-9">
+      <h4>data</h4>
+      <p>Data used in the application.</p>
+      <p>These files store user information. If you need to make any changes, there is no need to rebuild the project, you just need to add this information to the corresponding file.</p>
+      <ul>
+        <li><code>experience.json</code> - for experience list</li>
+        <li><code>person.json</code> - for person information</li>
+        <li><code>projects.json</code> - for project list</li>
+        <li><code>trust.json</code> - for testimonial list, companies list, skills and education</li>
+      </ul>
+      <br>
+      <h4>img</h4>
+      <p>Images used in the application</p>
+      
+    </div>
+  </div>
+  <hr>
+  <h2 id="staticfiles">Styles</h2>
+  <div class="row">
+    <div class="col-md-3">
+      <img class="img-fluid" src="img/styles.png" alt="">
+    </div>
+    <div class="col-md-9">
+      <p>Styles in scss format. This folder contains styles for the entire application. </p>
+      <h6>Change color scheme</h6>
+      <p>
+        The easiest way to change the color scheme is to change the values of variables in the <code>vars.scss</code> file. <br>
+        For example, the variable <code>$h1-font-size</code> sets the size of the H1 headers.<br>
+        More specific styles are contained in components.
+      </p>
+      
+    </div>
+  </div>
+  <hr>
+  <h2 id="components">Components</h2>
+  <p><b>components</b> folder contains all components used in the application. They are divided into two groups, components used for pages and reusable(shared) components.</p>
+  <br>
+  <div class="row">
+    <div class="col-md-3">
+      <img class="img-fluid" src="img/components.png" alt="">
+    </div>
+    <div class="col-md-9">
+      <h4>app.js</h4>
+      <p>Main application file. Routing rules are defined in this file.</p>
+      <br>
+      <h4>shared</h4>
+      <p>Reusable components</p>
+      <ul>
+        <li><code>contact-form</code> - the component that creates the contact form</li>
+        <li><code>footer</code> - the component that creates the application footer</li>
+        <li><code>navbar</code> - the component that creates the application navbar</li>
+      </ul>
+      <br>
+      <h4>pages components</h4>
+      <ul>
+        <li><code>about</code> - component responsible for the about page.</li>
+        <li><code>contact</code> - component responsible for the contact page.</li>
+        <li><code>home</code> - component responsible for the home page.</li>
+        <li><code>no-match</code> - component responsible for the 404 page.</li>
+        <li><code>projects</code> - component responsible for the projects page.</li>
+        <li><code>single-project</code> - component responsible for the single project page.</li>
+      </ul>
+      <p>You can edit pre-made page components or create new ones.</p>
+      <h4>Create new page</h4>
+      <p>To create a new page, you need to create a new component for this page. Just create new file in <code>components</code> folder.<br>
+        For example <code>components/landing-page/landing-page.js</code>
+      </p>
+      <pre>
+        import React from 'react'
+
+        const LandingPage = () => {
+          return (
+            <code class="no-buttons html">&lt;h1&gt;Landing Page&lt;/h1&gt;</code>
+          )
+        }
+
+        export default LandingPage
+      </pre>
+
+      <p>Now you need to create a new route for the page. Open file <code>app.js</code> and import component <br><code>import {LandingPageComponent} from 'import LandingPage from './pages/landing-page/landing-page'</code>
+        <br>then insert string <code>&lt;Route path="/landing-page" component={LandingPage}/&gt;</code>, <br>
+        before <code>&lt;Route component={NoMatch}/&gt;</code></p>
+      <p>Great, now you have a new page and you can see it <code>http://localhost:3000/landing-page</code> or <code>your_domain/landing-page</code></p>
+      <p>For more information please see <a href="https://reactjs.org/docs/getting-started.html" target="_blank">React</a> and <a
+        href="https://create-react-app.dev/docs/getting-started" target="_blank">Create React App</a></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

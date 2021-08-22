@@ -1,0 +1,90 @@
+{
+  "logos": [
+    "/assets/img/brands/armatura.svg",
+    "/assets/img/brands/saray.svg",
+    "/assets/img/brands/stolb.svg",
+    "/assets/img/brands/waves_flung.svg",
+    "/assets/img/brands/zelenui.svg"
+  ],
+  "testimonials": [
+    {
+      "name": "Anatoly Smith",
+      "id": 1,
+      "company": "ANKO Tech",
+      "position": "CEO",
+      "img": "/assets/img/drew-hays-agGIKYs4mYs-unsplash.jpg",
+      "text": "I worked with John the past 4 years. John is a brilliant developer with very large skills in frontend and SPA. We'll definitely work with him in the future."
+    },
+    {
+      "name": "Mark Stark",
+      "id": 2,
+      "company": "Woodoo Corp",
+      "position": "CEO",
+      "img": "/assets/img/jurica-koletic-efqnM0zWh54-unsplash.jpg",
+      "text": "John was a great developer. Could take little info and run with it. He always completed tasks ahead of schedule."
+    },
+    {
+      "name": "Richard Woo",
+      "id": 3,
+      "company": "Secure Lab",
+      "position": "CEO",
+      "img": "/assets/img/sander-weeteling-dq7Wlq_evnc-unsplash.jpg",
+      "text": "John is a top notch web designer, he is creative, punctual and communicates extremely well. I can only give him the highest recommendation to any future employers."
+    }
+  ],
+  "education": [
+    {
+      "company": "App Academy",
+      "id": 1,
+      "startDate": "March",
+      "endDate": "July 2021",
+      "speciality": "Fullstack Web Development",
+      "description": "Immersive software development course with focus on full stack web development"
+    },
+    {
+      "company": "Skidmore College",
+      "id": 2,
+      "startDate": "Feb 2011",
+      "endDate": "Jan 2015",
+      "speciality": "Political Science",
+      "description": "B.A. with Honors"
+    }
+  ],
+  "skills": [
+    {
+      "id": 1,
+      "name": "JavaScript",
+      "count": "80"
+    },
+    {
+      "id": 2,
+      "name": "Ruby",
+      "count": "80"
+    },
+    {
+      "id": 3,
+      "name": "Python",
+      "count": "50"
+    },
+    {
+      "id": 4,
+      "name": "Rails",
+      "count": "70"
+    },
+    {
+      "id": 5,
+      "name": "D3",
+      "count": "30"
+    },
+    {
+      "id": 6,
+      "name": "React",
+      "count": "60"
+    },
+    {
+      "id":7,
+      "name": "Html/Css",
+      "count": "80"
+    }
+  ]
+}
