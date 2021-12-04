@@ -10,8 +10,6 @@ const SingleProject = (props) => {
 
     let project = ProjectData.filter(proj => proj.id === projId)[0];
 
-    console.log(project);
-
     return (
             <div className="projects">
                 <div className="project">
