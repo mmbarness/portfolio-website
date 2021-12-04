@@ -8,7 +8,6 @@ import { downloadResource } from "../../../utils/fetches";
 export const Resume = props => {
 
     pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
-    const [responsiveDimensions, setResponsiveDimensions] = useState(0)
 
     const getWindowDimensions = () => (
         ({"width": window.innerWidth, "height": window.innerHeight})
