@@ -7,7 +7,6 @@ import ProjectList from './project-list/project-list'
 const Projects = () => {
   return (
     <ProjectsState>
-
       <>
           <div className="project-list nav-height-padding">
 

@@ -2,8 +2,26 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import './project-preview.scss'
 
-const ProjectPreview = ({project}) => {
+// interface project{
+//     bgColorHex?: string
+//     bgColorClass?: string
+//     brand: string
+//     category: string 
+//     id: number
+//     imgPreviewUrl: string 
+//     linkToProject: string
+//     pictureLinks: any 
+//     projectDescription: string 
+//     textColor: any 
+//     title: any 
+// }
 
+// interface props{
+//     project: project
+// }
+
+const ProjectPreview = (props) => {
+    const project = props.project 
     const {
         brand,
         title,
@@ -13,28 +31,17 @@ const ProjectPreview = ({project}) => {
         linkToProject
     } = project
 
-    // console.log(project);
-
-    return (
-        <Link className="project-preview mb-5 mb-md-7 block-link text-black pointer" to={linkToProject} state = {project}>
+    const link = () => (
+        <Link to={linkToProject} className="project-preview mb-5 mb-md-7 block-link text-black pointer" state = {project}>
             <div className="container ">
                 <div className={`row ${textColor ? textColor : 'text-body'}`}
                      style={{backgroundImage: `url(${imgPreviewUrl})`}}>
-
-                    {/* <div className="col-md-6 p-5 project-preview__text">
-                        <div className="brand-logo h5">
-                            {brand}
-                        </div>
-                        <h2 className="ml-4">{title}</h2>
-                        <div className="project-category">
-                            {category}
-                        </div>
-                    </div> */}
                 </div>
             </div>
-
         </Link>
     )
+    return(link())
+
 }
 
 export default ProjectPreview
