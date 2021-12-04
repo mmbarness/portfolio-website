@@ -3,10 +3,28 @@ import "regenerator-runtime/runtime";
 import { pdfjs, Document, Page } from "react-pdf";
 import '../../../styles/theme/resume.scss'
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
+import { downloadResource } from "../../../utils/fetches";
 
 export const Resume = props => {
 
     pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+    const [responsiveDimensions, setResponsiveDimensions] = useState(0)
+
+    const getWindowDimensions = () => (
+        ({"width": window.innerWidth, "height": window.innerHeight})
+    )
+
+    const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+    
+    const handleResize = () => {
+        setWindowDimensions(getWindowDimensions())
+    }
+
+    useEffect(() => {
+        handleResponsiveCanvas()
+    }, [setWindowDimensions]);
+
+    window.addEventListener('resize', handleResize);
 
     document.addEventListener("click", e => {
         const resumeModal = document.getElementById("resume-modal")
@@ -21,47 +39,23 @@ export const Resume = props => {
         }
     })
 
-    const DownloadResource = async (url = "https://portfolio-yep.s3.amazonaws.com/matthew+barnes+-+resume.pdf", filename = "matthew-barnes-resume.pdf") => {
-        let linkElement = document.getElementById('resume-dl-link')
-        if (!filename) filename = url.split('\\').pop().split('/').pop();
-        let response = await fetch(url, {
-            headers: new Headers({
-                'Origin': window.location.origin,
-            }),
-            mode: 'cors'
-            }
-        ).then(resp => resp.blob())
-        let blobUrl = await window.URL.createObjectURL(response);
-        if (linkElement) {linkElement.href= blobUrl}
-        return blobUrl
+    const handleResponsiveCanvas = () => {
+        const { width, height } = getWindowDimensions();
+        const lesserValue = width < height ? width : height;
+        const layout = (width / height) > 1 ? "landscape" : "portrait";
+        if (layout === "portrait") {
+            setWindowDimensions({'width': width - 20, 'height': height, 'lesserValue': lesserValue})
+        } else {
+            setWindowDimensions({'width': width - 200, 'height': height - 200, 'lesserValue': lesserValue - 200})
+        }
     }
-
-    const [pdfURL, setpdfURL] = useState(DownloadResource())
-
-    const getWindowDimensions = () => {
-        const { innerWidth: width, innerHeight: height } = window;
-        return ({
-            width,
-            height
-        });
-    }
-
-    const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
-
-    useEffect(() => {
-        const handleResize = () => (
-            setWindowDimensions(getWindowDimensions())
-        )
-        window.addEventListener('resize', handleResize);
-            return () => window.removeEventListener('resize', handleResize);
-    }, []);
         
     return(
         <div id="resume-modal" className={`resume-modal-${props.resumeModalVisible ? "is-open" : "close"}`}>
             <Document file="https://portfolio-yep.s3.amazonaws.com/matthew+barnes+-+resume.pdf" className="resume-pdf">
-                <Page pageNumber={1} height={windowDimensions.height - 75}/>
+                <Page pageNumber={1} width={windowDimensions.lesserValue}/>
             </Document>
-            <a id="resume-dl-link" href={pdfURL} download="Matthew Barnes-Resume.pdf">download me</a>
+            <a id="resume-dl-link" href={downloadResource()} download="Matthew Barnes-Resume.pdf">download me</a>
             <span id="close-resume" onClick={() => props.handleResumeModal()}>&times;</span>
         </div>   
     ) 

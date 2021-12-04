@@ -20,10 +20,15 @@
     grid-template-rows: 1fr;
     grid-template-columns: 45% 45% 10%;
     @media (min-width: 300px) and (max-width: 899px) {
-        
+        margin-top: 0em;
+        margin-right: 5vw;
     }
     @media (min-width: 900px) and (max-width: 1500px) {
         margin-top: -5em;
+        margin-left: 20em;
+    }
+    @media (min-width: 1501px) {
+        margin-top: -10em;
         margin-left: 20em;
     }
 }
