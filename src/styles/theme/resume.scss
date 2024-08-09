@@ -1,3 +1,6 @@
+@import '../vars.scss';
+@import "~bootstrap/scss/mixins/breakpoints";
+
 #resume-button{
     border: none;   
 }
@@ -9,7 +12,7 @@
 .resume-modal-is-open {
     // height: 80vh;
     display: grid;
-    z-index: 5;
+    z-index: $zindex-fixed + 20;
     position: absolute;
     // grid-column-start: 1;
     // grid-column-end: 3;
@@ -28,7 +31,7 @@
         margin-left: 20em;
     }
     @media (min-width: 1501px) {
-        margin-top: -10em;
+        margin-top: -25em;
         margin-left: 20em;
     }
 }

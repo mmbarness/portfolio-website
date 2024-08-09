@@ -1,0 +1,27 @@
+import React, {useReducer} from 'react'
+import { MODAL_CLOSE, MODAL_OPEN } from '../types'
+import ModalContext from './modal-context'
+import ModalReducer from './modal-reducer'
+
+const ModalState = (props) => {
+
+    const initialState = {
+        'open': false,
+    }
+
+    const [state, dispatch] = useReducer(ModalReducer, initialState)
+
+    const openModal = () => {
+        dispatch({type: MODAL_OPEN})
+    }
+
+    return <ModalContext.Provider
+        value={{
+            
+        }}
+    >
+        {props.children}
+    </ModalContext.Provider>
+}
+
+export default ModalState

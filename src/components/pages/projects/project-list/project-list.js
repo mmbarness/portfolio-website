@@ -13,8 +13,6 @@ const ProjectList = () => {
 
     const {projects, loading} = projectsContext
 
-    // console.log(projects);
-
     if (loading) return <p className="text-center">Loading projects...</p>
 
     return (

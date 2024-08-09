@@ -1,6 +1,18 @@
-import {GET_PERSON, SET_LOADING} from '../types'
+import {GET_PERSON, SET_LOADING, Person} from '../types'
 
-export default (state, action) => {
+type PersonState = {
+    person: Person;
+    loading: boolean;
+    getPerson: () => Promise<void>;
+    dispatch: () => void;
+}
+
+type PersonAction = {
+    type: string;
+    payload: Person
+}
+
+export default (state: PersonState, action: PersonAction) => {
     switch (action.type) {
         case GET_PERSON:
             return {

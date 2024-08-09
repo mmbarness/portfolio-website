@@ -1,4 +1,4 @@
-export const downloadResource = async (url = "https://portfolio-yep.s3.amazonaws.com/matthew+barnes+-+resume.pdf", filename = "matthew-barnes-resume.pdf") => {
+export const downloadResource = async (url = "https://portfolio-yep.s3.amazonaws.com/resume.pdf", filename = "resume.pdf") => {
     const linkElement = document.getElementById('resume-dl-link')
     if (!filename) filename = url.split('\\').pop().split('/').pop();
     const response = await fetch(url, {
