@@ -10,7 +10,11 @@ export async function getPublishedPosts(): Promise<DbPost[]> {
     .eq("published", true)
     .order("published_at", { ascending: false });
 
-  if (error) throw error;
+  // Return empty if table doesn't exist yet
+  if (error) {
+    console.error("getPublishedPosts error:", error);
+    return [];
+  }
   return data ?? [];
 }
 
