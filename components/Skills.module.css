@@ -1,0 +1,22 @@
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.category {
+  display: flex;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+}
+
+.name {
+  color: var(--fg-muted);
+  white-space: nowrap;
+  min-width: 7rem;
+}
+
+.keywords {
+  color: var(--fg);
+}

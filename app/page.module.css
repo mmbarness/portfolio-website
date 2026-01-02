@@ -1,0 +1,178 @@
+.main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  position: relative;
+}
+
+.printButton {
+  position: fixed;
+  top: var(--space-4);
+  right: var(--space-4);
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--fg-muted);
+  font-size: var(--text-lg);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.printButton:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+@media print {
+  .printButton {
+    display: none;
+  }
+}
+
+/* Skills inline */
+.skillsInline {
+  font-size: var(--text-sm);
+  color: var(--fg);
+  line-height: 1.6;
+}
+
+/* Projects */
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.project {
+  /* inherits */
+}
+
+.projectHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-4);
+  margin-bottom: var(--space-1);
+}
+
+.projectName {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--fg);
+}
+
+.projectCompany {
+  font-weight: 400;
+}
+
+.projectCompany a {
+  color: var(--fg-muted);
+}
+
+.projectCompany a:hover {
+  color: var(--accent);
+}
+
+.projectKeywords {
+  font-weight: 400;
+  color: var(--fg-muted);
+  margin-left: var(--space-2);
+}
+
+.projectStatus {
+  font-weight: 400;
+  font-style: italic;
+  color: var(--fg-dim);
+}
+
+.projectLinks {
+  display: flex;
+  gap: var(--space-3);
+  font-size: var(--text-xs);
+}
+
+.projectLinks a {
+  color: var(--fg-muted);
+}
+
+.projectLinks a:hover {
+  color: var(--accent);
+}
+
+.projectDesc {
+  font-size: var(--text-sm);
+  color: var(--fg);
+  margin-bottom: var(--space-1);
+}
+
+.projectHighlights {
+  list-style: none;
+  padding-left: var(--space-4);
+}
+
+.projectHighlights li {
+  position: relative;
+  padding-left: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--fg-muted);
+}
+
+.projectHighlights li::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  color: var(--fg-dim);
+}
+
+/* Education */
+.education {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.eduItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.eduInstitution {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--fg);
+}
+
+.eduArea {
+  font-size: var(--text-sm);
+  color: var(--fg-muted);
+}
+
+/* Footer */
+.footer {
+  margin-top: var(--space-12);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.cursor {
+  color: var(--accent);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media print {
+  .footer {
+    display: none;
+  }
+}

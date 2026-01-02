@@ -1,0 +1,125 @@
+{
+  "basics": {
+    "name": "Matthew Barnes",
+    "label": "Senior Software Engineer",
+    "email": "011mbarnes@gmail.com",
+    "phone": "315-212-9076",
+    "location": {
+      "city": "New York",
+      "region": "NY"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "matthew-b-61162b64",
+        "url": "https://www.linkedin.com/in/matthew-b-61162b64/"
+      },
+      {
+        "network": "GitHub",
+        "username": "mmbarness",
+        "url": "https://github.com/mmbarness"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Core",
+      "keywords": ["Rust", "Ruby", "Rails", "Python", "TypeScript", "React", "Next.js", "Neo4j", "LangGraph", "Redis", "Docker", "SQL", "GitHub Actions"]
+    }
+  ],
+  "work": [
+    {
+      "name": "Woflow",
+      "url": "https://www.woflow.com/",
+      "position": "Senior Software Engineer",
+      "startDate": "2025-09",
+      "highlights": [
+        "Architecting composable AI agent platform processing merchant data at scale",
+        "Leading migration from human-powered workforce operations to AI-native architecture, reducing processing time from hours to under 2 minutes",
+        "Implementing DAG-based transformation patterns enabling agents to invoke other agents as composable tools"
+      ]
+    },
+    {
+      "name": "Houlihan Lokey",
+      "url": "https://www.hl.com/",
+      "position": "Senior Software Engineer",
+      "summary": "Portfolio Valuations",
+      "startDate": "2024-09",
+      "highlights": [
+        "Spearheading internal AI application development to model domain knowledge using Neo4j-based knowledge graphs",
+        "Enabling 24/7 access to technical and business context across the firm through graph-integrated generative models"
+      ]
+    },
+    {
+      "name": "BNY",
+      "url": "https://www.bny.com/",
+      "position": "Software Engineer",
+      "summary": "Middle Office",
+      "startDate": "2023-06",
+      "endDate": "2024-09",
+      "highlights": [
+        "Developed systems to automate ingestion of corporate actions (e.g., stock buybacks, dividends) into BNY's proprietary platform, Eagle",
+        "Led optimization of critical microservices; identified and resolved memory leaks"
+      ]
+    },
+    {
+      "name": "Dignifi",
+      "url": "https://www.dignifi.com/",
+      "position": "Software Engineer",
+      "startDate": "2021-09",
+      "endDate": "2023-06",
+      "highlights": [
+        "Built front-end features with React; implemented dynamic tables and API integrations using Material-UI",
+        "Dockerized Ruby on Rails backend to streamline development and deployment",
+        "Enhanced CI/CD: integrated automated browser testing with GitHub Actions; surfaced test results alongside feature environment links with auto-comments"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Mailroom",
+      "company": "Reasonal",
+      "companyUrl": "https://reasonal.ai",
+      "keywords": ["Rust", "Python", "Redis", "Neo4j"],
+      "description": "Email classification pipeline for M&A deal tracking in financial services.",
+      "highlights": [
+        "Rust core for high-performance email ingestion and orchestration",
+        "LLM-powered classification of deal communications (NDAs, IOIs, diligence requests)",
+        "Neo4j knowledge graph connecting emails to deals, parties, and deal stages"
+      ]
+    },
+    {
+      "name": "Animaworks",
+      "keywords": ["Typescript", "React", "Reduxjs/toolkit", "Sanity"],
+      "description": "Production company portfolio website built with Sanity's headless CMS and reduxjs/toolkit's latest api.",
+      "highlights": [
+        "Sanity's CMS gives the client an easy and convenient way to manage what's on their webpage with no compromise on the speed of the site itself"
+      ],
+      "url": "https://www.animaworks.nyc/"
+    },
+    {
+      "name": "Rusty Hooks",
+      "keywords": ["Rust", "Tokio", "Systems Programming"],
+      "description": "Hook arbitrary bash scripts into io events at a given directory.",
+      "highlights": [
+        "Built a multithreaded Rust app that hooks filesystem events to execute bash scripts, practicing memory-safe design without garbage collectors"
+      ],
+      "repo": "https://github.com/mmbarness/rusty-hooks"
+    }
+  ],
+  "education": [
+    {
+      "institution": "App Academy",
+      "area": "Full Stack Web Development",
+      "studyType": "Immersive",
+      "endDate": "2021"
+    },
+    {
+      "institution": "Skidmore College",
+      "location": "Saratoga Springs, NY",
+      "area": "Political Science",
+      "studyType": "B.A. with Honors",
+      "endDate": "2015"
+    }
+  ]
+}
