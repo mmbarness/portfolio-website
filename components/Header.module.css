@@ -27,3 +27,17 @@
 .contact a:hover {
   color: var(--accent);
 }
+
+.blogLink {
+  color: var(--fg-muted);
+}
+
+.blogLink:hover {
+  color: var(--accent);
+}
+
+@media print {
+  .blogLink {
+    display: none;
+  }
+}
