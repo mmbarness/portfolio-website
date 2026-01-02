@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getAllPostSlugs, getPostBySlug } from "@/lib/posts";
+import { getPublishedPostBySlug } from "@/lib/posts-db";
 import { compileMDX } from "next-mdx-remote/rsc";
 import styles from "../blog.module.css";
 
@@ -7,14 +7,11 @@ interface Props {
   params: Promise<{ slug: string }>;
 }
 
-export async function generateStaticParams() {
-  const slugs = getAllPostSlugs();
-  return slugs.map((slug) => ({ slug }));
-}
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
+  const post = await getPublishedPostBySlug(slug);
   if (!post) return { title: "Not Found" };
 
   return {
@@ -25,7 +22,7 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function PostPage({ params }: Props) {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
+  const post = await getPublishedPostBySlug(slug);
 
   if (!post) {
     notFound();
@@ -40,7 +37,9 @@ export default async function PostPage({ params }: Props) {
     <article className={styles.article}>
       <header className={styles.postHeader}>
         <h1 className={styles.postHeaderTitle}>{post.title}</h1>
-        <div className={styles.postMeta}>{post.date}</div>
+        <div className={styles.postMeta}>
+          {(post.published_at ?? post.created_at).slice(0, 10)}
+        </div>
         {post.tags && post.tags.length > 0 && (
           <div className={styles.tags}>
             {post.tags.map((tag) => (
