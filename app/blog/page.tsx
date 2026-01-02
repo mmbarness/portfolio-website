@@ -12,13 +12,6 @@ export default function BlogPage() {
 
   return (
     <main className={styles.main}>
-      <header className={styles.header}>
-        <Link href="/" className={styles.backLink}>
-          cd ..
-        </Link>
-        <h1 className={styles.title}>~/blog</h1>
-      </header>
-
       <Section title="Posts">
         {posts.length === 0 ? (
           <p className={styles.empty}>No posts yet.</p>

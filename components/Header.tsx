@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type { Basics } from "@/lib/types";
 import styles from "./Header.module.css";
 
@@ -23,9 +22,6 @@ export function Header({ basics }: HeaderProps) {
             {profile.network}
           </a>
         ))}
-        <Link href="/blog" className={styles.blogLink}>
-          Blog
-        </Link>
         {basics.location && (
           <span>{basics.location.city}</span>
         )}

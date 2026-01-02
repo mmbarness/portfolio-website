@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllPostSlugs, getPostBySlug } from "@/lib/posts";
 import { compileMDX } from "next-mdx-remote/rsc";
@@ -40,9 +39,6 @@ export default async function PostPage({ params }: Props) {
   return (
     <article className={styles.article}>
       <header className={styles.postHeader}>
-        <Link href="/blog" className={styles.backLink}>
-          cd ..
-        </Link>
         <h1 className={styles.postHeaderTitle}>{post.title}</h1>
         <div className={styles.postMeta}>{post.date}</div>
         {post.tags && post.tags.length > 0 && (
